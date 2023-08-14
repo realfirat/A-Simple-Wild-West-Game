@@ -34,7 +34,7 @@ func _process(delta):
 			rifle.visible = true
 		elif rifle.visible:
 			gun.visible = true
-			rifle.visible = false # GITHUB TES
+			rifle.visible = false # GITHUB TEST
 	
 	if gun.visible:                              # ------------ FIRE MECHANISM
 		if Input.is_action_pressed("fire"):
