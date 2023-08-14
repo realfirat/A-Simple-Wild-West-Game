@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://wnqou0ch1ulc"]
+
+[ext_resource type="Texture2D" uid="uid://ceqhj0vlklyjk" path="res://assets/_0001_bullet_big.png" id="1_578an"]
+[ext_resource type="Script" path="res://scripts/bullet_rifle.gd" id="1_aotxa"]
+[ext_resource type="Texture2D" uid="uid://onuc548ujewf" path="res://assets/explosion_particle.png" id="3_2beq4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cb623"]
+size = Vector2(13, 8)
+
+[sub_resource type="Curve" id="Curve_u6773"]
+_data = [Vector2(0, 0.978947), 0.0, 0.0, 0, 0, Vector2(0.952381, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="bullet_rifle" type="Area2D"]
+script = ExtResource("1_aotxa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_578an")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_cb623")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0.5, 0)
+scale = Vector2(0.95, 0.6)
+
+[node name="shoot_particle" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 1
+lifetime = 0.1
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+local_coords = true
+texture = ExtResource("3_2beq4")
+emission_shape = 1
+emission_sphere_radius = 3.0
+gravity = Vector2(0, 0)
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_u6773")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

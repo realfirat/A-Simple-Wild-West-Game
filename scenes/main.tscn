@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://d2br6yx14n0mn"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_hc6o7"]
+[ext_resource type="Texture2D" uid="uid://ccc3j236c8jin" path="res://assets/_0017_Layer-0.png" id="2_uejij"]
+[ext_resource type="Texture2D" uid="uid://bwdp4ni5epkr0" path="res://assets/_0014_arka_daglar.png" id="3_ovaie"]
+[ext_resource type="Texture2D" uid="uid://b176o3mdi2joo" path="res://assets/_0013_railroad.png" id="4_e5xng"]
+[ext_resource type="PackedScene" uid="uid://wblx8v5541rq" path="res://scenes/kovboy.tscn" id="5_u1lv2"]
+[ext_resource type="Script" path="res://scripts/bullet_counter.gd" id="6_wc3cm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8afdw"]
+size = Vector2(274, 1203)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dhnu"]
+size = Vector2(288, 1305)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psa0j"]
+size = Vector2(2281.5, 313)
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_hc6o7")
+
+[node name="bg_sky" type="Sprite2D" parent="."]
+z_index = -20
+texture = ExtResource("2_uejij")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="bg_backmountain" type="Sprite2D" parent="."]
+z_index = -19
+position = Vector2(958, 666)
+texture = ExtResource("3_ovaie")
+metadata/_edit_lock_ = true
+
+[node name="bg_zone" type="Sprite2D" parent="."]
+z_index = -18
+position = Vector2(0, 31)
+texture = ExtResource("4_e5xng")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="kovboy" parent="." instance=ExtResource("5_u1lv2")]
+position = Vector2(809, 653)
+
+[node name="border_collisions" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border_collisions"]
+position = Vector2(-137, 597)
+shape = SubResource("RectangleShape2D_8afdw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="border_collisions"]
+position = Vector2(2065, 608.5)
+shape = SubResource("RectangleShape2D_8dhnu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="border_collisions"]
+position = Vector2(865, 1236)
+shape = SubResource("RectangleShape2D_psa0j")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="border_collisions"]
+polygon = PackedVector2Array(-12, 506, 8, 511, 108, 504, 207, 485, 312, 453, 439, 421, 592, 403, 739, 401, 826, 401, 922, 406, 1013, 413, 1170, 442, 1286, 463, 1403, 452, 1564, 448, 1723, 481, 1831, 526, 1943, 535, 1979, -183, -143, -135)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="bullet_counter" type="Label" parent="UI"]
+offset_left = 5.0
+offset_top = 916.0
+offset_right = 547.0
+offset_bottom = 1066.0
+theme_override_font_sizes/font_size = 20
+script = ExtResource("6_wc3cm")

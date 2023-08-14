@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=3 uid="uid://wblx8v5541rq"]
+
+[ext_resource type="Script" path="res://scripts/kovboy.gd" id="1_d52dx"]
+[ext_resource type="Texture2D" uid="uid://c455fdujyy1hg" path="res://assets/_0007_kovboy_body.png" id="1_o5yio"]
+[ext_resource type="Texture2D" uid="uid://cy6cewtiigx6k" path="res://assets/_0004_silah.png" id="2_astmb"]
+[ext_resource type="Texture2D" uid="uid://di0by3nl215cs" path="res://assets/_0006_kovboy_kafa.png" id="2_c1gnj"]
+[ext_resource type="Texture2D" uid="uid://7kdqrhdq0ta1" path="res://assets/_0005_kovboy_sapka.png" id="3_6lwg6"]
+[ext_resource type="Script" path="res://scripts/gun.gd" id="5_tk7v3"]
+[ext_resource type="Texture2D" uid="uid://doe8s8lvl8r3o" path="res://assets/_0003_tufek.png" id="8_21g0h"]
+[ext_resource type="Script" path="res://scripts/rifle.gd" id="9_q2qx6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0uyjh"]
+radius = 18.0
+height = 44.0
+
+[node name="kovboy" type="CharacterBody2D"]
+script = ExtResource("1_d52dx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("CapsuleShape2D_0uyjh")
+
+[node name="spr_body" type="Sprite2D" parent="."]
+position = Vector2(0, 12)
+texture = ExtResource("1_o5yio")
+
+[node name="spr_head" type="Sprite2D" parent="."]
+position = Vector2(1, -12)
+texture = ExtResource("2_c1gnj")
+offset = Vector2(1, 0)
+
+[node name="spr_hat" type="Sprite2D" parent="."]
+position = Vector2(0, -23)
+texture = ExtResource("3_6lwg6")
+
+[node name="gun" type="Node2D" parent="."]
+visible = false
+position = Vector2(0, 7)
+script = ExtResource("5_tk7v3")
+
+[node name="spr_back_gun" type="Sprite2D" parent="gun"]
+z_index = -1
+z_as_relative = false
+position = Vector2(0, -15)
+texture = ExtResource("2_astmb")
+offset = Vector2(23, 5)
+
+[node name="spr_front_gun" type="Sprite2D" parent="gun"]
+position = Vector2(0, -7)
+texture = ExtResource("2_astmb")
+offset = Vector2(15.6655, 5.9482)
+
+[node name="back_gun_reverse_pos" type="Marker2D" parent="gun"]
+position = Vector2(0, 4)
+
+[node name="front_gun_reverse_pos" type="Marker2D" parent="gun"]
+position = Vector2(0, -6)
+
+[node name="rifle" type="Node2D" parent="."]
+script = ExtResource("9_q2qx6")
+
+[node name="spr_rifle" type="Sprite2D" parent="rifle"]
+position = Vector2(12, 6)
+texture = ExtResource("8_21g0h")
+offset = Vector2(3, 7)
+
+[node name="left_pos_marker" type="Marker2D" parent="rifle"]
+position = Vector2(11, -20)
+
+[node name="right_pos_marker" type="Marker2D" parent="rifle"]
+position = Vector2(11, 6)
+
+[node name="head_reverse_pos" type="Marker2D" parent="."]
+position = Vector2(-3, -13)
+
+[node name="head_first_pos" type="Marker2D" parent="."]
+position = Vector2(0, -13)
+
+[node name="timer_small_gun" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="timer_rifle" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="rifle_bullet_pos" type="Marker2D" parent="."]
+position = Vector2(0, 6)
+
+[connection signal="timeout" from="timer_small_gun" to="." method="_on_timer_small_gun_timeout"]
+[connection signal="timeout" from="timer_rifle" to="." method="_on_timer_rifle_timeout"]
