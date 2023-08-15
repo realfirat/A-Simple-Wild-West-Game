@@ -1,2 +1,7 @@
 res://scenes/kovboy.tscn
 res://scripts/kovboy.gd
+res://scenes/main.tscn
+res://scenes/bullet_rifle.tscn
+res://scenes/bullet_small.tscn
+res://scripts/gun.gd
+res://scripts/rifle.gd
