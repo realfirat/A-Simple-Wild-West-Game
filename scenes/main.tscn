@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d2br6yx14n0mn"]
+[gd_scene load_steps=11 format=3 uid="uid://d2br6yx14n0mn"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hc6o7"]
 [ext_resource type="Texture2D" uid="uid://ccc3j236c8jin" path="res://assets/_0017_Layer-0.png" id="2_uejij"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b176o3mdi2joo" path="res://assets/_0013_railroad.png" id="4_e5xng"]
 [ext_resource type="PackedScene" uid="uid://wblx8v5541rq" path="res://scenes/kovboy.tscn" id="5_u1lv2"]
 [ext_resource type="Script" path="res://scripts/bullet_counter.gd" id="6_wc3cm"]
+[ext_resource type="Script" path="res://scripts/building_grid.gd" id="7_eope7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8afdw"]
 size = Vector2(274, 1203)
@@ -67,3 +68,10 @@ offset_right = 547.0
 offset_bottom = 1066.0
 theme_override_font_sizes/font_size = 20
 script = ExtResource("6_wc3cm")
+
+[node name="building_grid" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_eope7")

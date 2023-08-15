@@ -1,4 +1,4 @@
 extends Node
 
-var small_bullet = 100
-var big_bullet = 20
+var bullet = 100
+var is_build_mode = false

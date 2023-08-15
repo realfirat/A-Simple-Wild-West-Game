@@ -7,7 +7,7 @@ var bullet_ready = true
 func _ready():
 	aim_position = get_global_mouse_position() - global_position
 	aim_position = aim_position.normalized()
-	global_variables.small_bullet -= 1
+	global_variables.bullet -= 1
 	$shoot_particle.emitting = true
 	
 func _physics_process(delta):

@@ -23,7 +23,7 @@ func _ready():
 func _process(delta):
 	
 	if Input.is_action_pressed("fire"):
-		if global_variables.small_bullet > 0 and small_gun_ready:
+		if global_variables.bullet > 0 and small_gun_ready:
 			var small_bullet_instance = small_bullet.instantiate()
 			small_bullet_instance.global_position = global_position - Vector2(0, 4)
 			get_parent().add_child(small_bullet_instance)
@@ -39,7 +39,20 @@ func _process(delta):
 		head.position = head_reverse_pos
 		$spr_head.flip_h = true
 		$spr_hat.flip_h = true
+		
+	if Input.is_action_just_pressed("build_mode"):
+		if global_variables.is_build_mode:
+			global_variables.is_build_mode = false
+		else:
+			global_variables.is_build_mode = true
 			
+
+
+
+
+
+
+
 func _physics_process(delta):         # ---------- PHYSICS PROCESS
 	velocity = Vector2.ZERO
 	
