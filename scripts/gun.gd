@@ -32,7 +32,7 @@ func _process(delta):
 		back_gun.flip_v = true
 		
 func _input(event):
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and not global_variables.is_build_mode:
 		var tween = create_tween()
 		if get_global_mouse_position().x >= global_position.x:  
 			tween.tween_property(self, "position", position + Vector2(-5, 0), 0.05).from(position)

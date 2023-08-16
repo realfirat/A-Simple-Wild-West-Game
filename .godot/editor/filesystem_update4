@@ -1,4 +1,2 @@
-res://scenes/main.tscn
-res://scripts/building_grid.gd
-res://scenes/kovboy.tscn
-res://scripts/main.gd
+res://scenes/b_sheriffoffice.tscn
+res://scenes/b_saloon.tscn

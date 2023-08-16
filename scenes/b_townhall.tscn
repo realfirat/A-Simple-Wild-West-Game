@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsq75ws3ku8hd"]
+
+[ext_resource type="Texture2D" uid="uid://bw7xbppioa0rd" path="res://assets/_0011_Town-Hall.png" id="1_srcmi"]
+
+[node name="b_townhall" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_srcmi")
+offset = Vector2(0, -112)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-113, 0, -113, -158, -88, -158, -88, -192, -29, -205, -29, -220, 0, -225, 29, -220, 29, -206, 88, -191, 89, -159, 113, -159, 113, 0)
