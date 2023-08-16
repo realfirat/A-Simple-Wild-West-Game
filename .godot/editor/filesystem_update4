@@ -1,2 +1,9 @@
 res://scenes/b_sheriffoffice.tscn
 res://scenes/b_saloon.tscn
+res://scenes/main.tscn
+res://scripts/main.gd
+res://scenes/kovboy.tscn
+res://scenes/b_bank.tscn
+res://scenes/b_church.tscn
+res://scenes/b_townhall.tscn
+res://scenes/building_block.gd

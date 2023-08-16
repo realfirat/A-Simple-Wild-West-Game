@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2br6yx14n0mn"]
+[gd_scene load_steps=18 format=3 uid="uid://d2br6yx14n0mn"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hc6o7"]
 [ext_resource type="Texture2D" uid="uid://ccc3j236c8jin" path="res://assets/_0017_Layer-0.png" id="2_uejij"]
@@ -7,6 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://wblx8v5541rq" path="res://scenes/kovboy.tscn" id="5_u1lv2"]
 [ext_resource type="Script" path="res://scripts/bullet_counter.gd" id="6_wc3cm"]
 [ext_resource type="Script" path="res://scripts/building_grid.gd" id="7_eope7"]
+[ext_resource type="Texture2D" uid="uid://d2irel15ci05a" path="res://assets/ikon_bg.png" id="8_r5o7l"]
+[ext_resource type="Script" path="res://scenes/building_block.gd" id="8_tjt72"]
+[ext_resource type="Texture2D" uid="uid://d24bvu33jjfu1" path="res://assets/ikon_bank.png" id="9_2g5o0"]
+[ext_resource type="Texture2D" uid="uid://dm7uqnkbhwkvv" path="res://assets/ikon_church.png" id="10_beb4l"]
+[ext_resource type="Texture2D" uid="uid://b2svs3cdlj106" path="res://assets/ikon_saloon.png" id="11_7musx"]
+[ext_resource type="Texture2D" uid="uid://d1baxpf26c14e" path="res://assets/ikon_sheriff.png" id="12_jm0rj"]
+[ext_resource type="Texture2D" uid="uid://bopi7qb785esf" path="res://assets/ikon_townhall.png" id="13_gmuh2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8afdw"]
 size = Vector2(274, 1203)
@@ -81,3 +88,70 @@ script = ExtResource("7_eope7")
 
 [node name="Polygon2D" type="Polygon2D" parent="UI/building_grid"]
 polygon = PackedVector2Array(-2, 510, 124, 502, 193, 489, 315, 451, 446, 418, 597, 402, 693, 402, 818, 400, 924, 405, 1021, 414, 1287, 463, 1406, 451, 1564, 450, 1718, 480, 1832, 528, 1942, 535, 1951, 1159, -45, 1110, -40, 525)
+
+[node name="building_block" type="Node2D" parent="UI"]
+position = Vector2(0, 174)
+script = ExtResource("8_tjt72")
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/building_block"]
+position = Vector2(1398, 1043)
+texture = ExtResource("8_r5o7l")
+
+[node name="bank" type="Control" parent="UI/building_block"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1569.0
+offset_top = 997.0
+offset_right = 1569.0
+offset_bottom = 1168.0
+
+[node name="ikon_bank" type="Sprite2D" parent="UI/building_block/bank"]
+texture = ExtResource("9_2g5o0")
+
+[node name="church" type="Control" parent="UI/building_block"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1851.0
+offset_top = 997.0
+offset_right = 1851.0
+offset_bottom = 1168.0
+
+[node name="ikon_church" type="Sprite2D" parent="UI/building_block/church"]
+position = Vector2(-462, 0)
+texture = ExtResource("10_beb4l")
+
+[node name="saloon" type="Control" parent="UI/building_block"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1492.0
+offset_top = 998.0
+offset_right = 1492.0
+offset_bottom = 1169.0
+
+[node name="ikon_saloon" type="Sprite2D" parent="UI/building_block/saloon"]
+position = Vector2(-464, 0)
+texture = ExtResource("11_7musx")
+
+[node name="sheriff" type="Control" parent="UI/building_block"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2217.0
+offset_top = 997.0
+offset_right = 2217.0
+offset_bottom = 1168.0
+
+[node name="ikon_sheriff" type="Sprite2D" parent="UI/building_block/sheriff"]
+position = Vector2(-466, 0)
+texture = ExtResource("12_jm0rj")
+
+[node name="townhall" type="Control" parent="UI/building_block"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1675.0
+offset_top = 998.0
+offset_right = 1675.0
+offset_bottom = 1169.0
+
+[node name="ikon_townhall" type="Sprite2D" parent="UI/building_block/townhall"]
+position = Vector2(-468, 0)
+texture = ExtResource("13_gmuh2")
