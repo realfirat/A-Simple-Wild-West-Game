@@ -1,8 +1,13 @@
 extends Control
 
 func _draw():
-	if global_variables.is_build_mode:
+		var y = 0
+		for n in 1080/36:
+			draw_line(Vector2(0, 0 + y), Vector2(1920, 0 + y), Color8(255, 255, 255, 255/8), 1, true)
+			y += 36
+		
 		var x = 0
-		for n in 100:
-			draw_rect(Rect2(0, 0 + x, 1920, 1), Color.GRAY, true, 1)
+		for n in 1920/36:
+			draw_line(Vector2(0 + x, 0), Vector2(0 + x, 1920), Color8(255, 255, 255, 255/8), 1, true)
 			x += 36
+

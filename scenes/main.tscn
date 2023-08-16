@@ -70,8 +70,14 @@ theme_override_font_sizes/font_size = 20
 script = ExtResource("6_wc3cm")
 
 [node name="building_grid" type="Control" parent="UI"]
+visible = false
+modulate = Color(1, 1, 1, 0.74902)
+clip_children = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("7_eope7")
+
+[node name="Polygon2D" type="Polygon2D" parent="UI/building_grid"]
+polygon = PackedVector2Array(-2, 510, 124, 502, 193, 489, 315, 451, 446, 418, 597, 402, 693, 402, 818, 400, 924, 405, 1021, 414, 1287, 463, 1406, 451, 1564, 450, 1718, 480, 1832, 528, 1942, 535, 1951, 1159, -45, 1110, -40, 525)

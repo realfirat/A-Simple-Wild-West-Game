@@ -1,13 +1,4 @@
-res://scenes/kovboy.tscn
-res://scripts/kovboy.gd
 res://scenes/main.tscn
-res://scenes/bullet_rifle.tscn
-res://scenes/bullet_small.tscn
-res://scripts/gun.gd
-res://scripts/rifle.gd
-res://scripts/main.gd
-res://scripts/global_variables.gd
 res://scripts/building_grid.gd
-res://scripts/bullet_small.gd
-res://scripts/bullet_counter.gd
-res://scripts/bullet_rifle.gd
+res://scenes/kovboy.tscn
+res://scripts/main.gd
