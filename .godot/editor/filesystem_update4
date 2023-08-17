@@ -10,3 +10,11 @@ res://scripts/bullet_rifle.gd
 res://scenes/bullet_rifle.tscn
 res://scripts/ikon_saloon.gd
 res://scripts/b_saloon.gd
+res://scripts/ikon_townhall.gd
+res://scripts/b_townhall.gd
+res://scripts/ikon_bank.gd
+res://scripts/b_bank.gd
+res://scripts/ikon_church.gd
+res://scripts/b_church.gd
+res://scripts/ikon_sheriff.gd
+res://scripts/b_sheriffoffice.gd

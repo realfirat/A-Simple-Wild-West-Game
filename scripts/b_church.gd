@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@onready var saloon = preload("res://scenes/saloon.tscn")
+@onready var church = preload("res://scenes/church.tscn")
 var is_ready_to_build
 
 func _ready():
@@ -13,9 +13,9 @@ func _process(delta):
 		)
 	
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and is_ready_to_build:
-		var b_saloon = saloon.instantiate()
-		b_saloon.global_position = global_position
-		get_parent().add_child(b_saloon)
+		var b_church = church.instantiate()
+		b_church.global_position = global_position
+		get_parent().add_child(b_church)
 		queue_free()
 
 func _on_timer_timeout():

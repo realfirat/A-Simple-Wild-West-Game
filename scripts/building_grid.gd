@@ -11,3 +11,4 @@ func _draw():
 			draw_line(Vector2(0 + x, 0), Vector2(0 + x, 1920), Color8(255, 255, 255, 255/8), 1, true)
 			x += 36
 
+		
