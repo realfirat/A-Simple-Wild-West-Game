@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://xfsnceor6dyd"]
+
+[ext_resource type="Texture2D" uid="uid://cwxdqdbecjv5q" path="res://assets/_0010_Church.png" id="1_82nr4"]
+
+[node name="b_church" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-104, 0, -104, -205, -77, -258, -47, -203, -47, -111, 82, -111, 105, -54, 105, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_82nr4")
+offset = Vector2(0, -129)

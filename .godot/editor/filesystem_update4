@@ -8,3 +8,5 @@ res://scenes/b_sheriffoffice.tscn
 res://scenes/b_saloon.tscn
 res://scripts/bullet_rifle.gd
 res://scenes/bullet_rifle.tscn
+res://scripts/ikon_saloon.gd
+res://scripts/b_saloon.gd

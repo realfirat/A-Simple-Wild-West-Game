@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://wblx8v5541rq" path="res://scenes/kovboy.tscn" id="5_u1lv2"]
 [ext_resource type="Script" path="res://scripts/bullet_counter.gd" id="6_wc3cm"]
 [ext_resource type="Script" path="res://scripts/building_grid.gd" id="7_eope7"]
+[ext_resource type="Script" path="res://scripts/building_block.gd" id="8_l2wer"]
 [ext_resource type="Texture2D" uid="uid://d2irel15ci05a" path="res://assets/ikon_bg.png" id="8_r5o7l"]
-[ext_resource type="Script" path="res://scenes/building_block.gd" id="8_tjt72"]
 [ext_resource type="Script" path="res://scripts/ikon_bank.gd" id="10_e3prf"]
 [ext_resource type="Texture2D" uid="uid://b0x7ydfwx5o52" path="res://assets/kovboy_14temmuz_0001_4-copy.png" id="11_a6ite"]
 [ext_resource type="Script" path="res://scripts/ikon_church.gd" id="12_d4ry7"]
@@ -52,6 +52,7 @@ centered = false
 metadata/_edit_lock_ = true
 
 [node name="kovboy" parent="." instance=ExtResource("5_u1lv2")]
+z_index = 5
 position = Vector2(809, 653)
 
 [node name="border_collisions" type="StaticBody2D" parent="."]
@@ -96,7 +97,7 @@ polygon = PackedVector2Array(-2, 510, 124, 502, 193, 489, 315, 451, 446, 418, 59
 
 [node name="building_block" type="Node2D" parent="UI"]
 position = Vector2(0, 174)
-script = ExtResource("8_tjt72")
+script = ExtResource("8_l2wer")
 
 [node name="Sprite2D" type="Sprite2D" parent="UI/building_block"]
 position = Vector2(1398, 1043)
@@ -191,10 +192,14 @@ texture = ExtResource("19_h0kwv")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UI/building_block/townhall/Area2D"]
 polygon = PackedVector2Array(-545, 0, -469, -77, -392, 0, -468, 77)
 
+[node name="building_layer" type="Node2D" parent="."]
+z_index = 1
+
 [connection signal="mouse_entered" from="UI/building_block/bank/Area2D" to="UI/building_block/bank" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="UI/building_block/bank/Area2D" to="UI/building_block/bank" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="UI/building_block/church/Area2D" to="UI/building_block/church" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="UI/building_block/church/Area2D" to="UI/building_block/church" method="_on_area_2d_mouse_exited"]
+[connection signal="input_event" from="UI/building_block/saloon/Area2D" to="UI/building_block/saloon" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="UI/building_block/saloon/Area2D" to="UI/building_block/saloon" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="UI/building_block/saloon/Area2D" to="UI/building_block/saloon" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="UI/building_block/sheriff/Area2D" to="UI/building_block/sheriff" method="_on_area_2d_mouse_entered"]

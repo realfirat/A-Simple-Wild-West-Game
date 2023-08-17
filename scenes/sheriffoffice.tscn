@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://lf4el2p01jvk"]
+
+[ext_resource type="Texture2D" uid="uid://smru7qg678du" path="res://assets/_0008_Sheriff-Office.png" id="1_oxrst"]
+
+[node name="b_sheriffoffice" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(81, -1, -80, -1, -80, -70, -85, -70, -78, -86, -72, -86, -72, -103, -27, -103, -27, -113, 0, -120, 27, -113, 27, -103, 73, -103, 73, -86, 78, -86, 86, -70, 81, -70)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("1_oxrst")
+offset = Vector2(0, -59)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5sqde6um2xkv"]
+
+[ext_resource type="Texture2D" uid="uid://cvycur0rehjb7" path="res://assets/_0009_Bank.png" id="1_dv4lw"]
+
+[node name="b_bank" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -83.6)
+polygon = PackedVector2Array(-91, -47, -53, -47, -53, -66, -2, -84, 51, -67, 51, -47, 89, -47, 89, -8, 105, -8, 105, 84, -107, 84, -107, -8, -91, -8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 0.399994)
+texture = ExtResource("1_dv4lw")
+offset = Vector2(0, -84)
