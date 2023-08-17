@@ -1,7 +1,7 @@
 extends Area2D
 
 var aim_position
-var bullet_speed = 20
+var bullet_speed = 30
 var bullet_ready = true
 
 func _ready():
