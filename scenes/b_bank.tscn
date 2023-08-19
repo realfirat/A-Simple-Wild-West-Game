@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cvycur0rehjb7" path="res://assets/_0009_Bank.png" id="1_dp1x3"]
 [ext_resource type="Script" path="res://scripts/b_bank.gd" id="1_ubgom"]
 
-[node name="b_bank" type="StaticBody2D"]
+[node name="b_bank" type="Area2D"]
 script = ExtResource("1_ubgom")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

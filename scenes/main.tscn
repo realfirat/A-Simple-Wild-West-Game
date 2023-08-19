@@ -195,6 +195,14 @@ polygon = PackedVector2Array(-545, 0, -469, -77, -392, 0, -468, 77)
 [node name="building_layer" type="Node2D" parent="."]
 z_index = 1
 
+[node name="build_zone" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="build_zone"]
+polygon = PackedVector2Array(1, 613, 46, 623, 103, 629, 167, 629, 228, 620, 296, 601, 365, 568, 421, 537, 488, 500, 541, 481, 586, 467, 660, 458, 731, 458, 787, 466, 857, 478, 954, 502, 1045, 531, 1121, 555, 1183, 564, 1313, 569, 1434, 568, 1520, 568, 1602, 573, 1691, 585, 1823, 609, 1925, 638, 1927, 686, 1881, 674, 1813, 660, 1717, 642, 1627, 630, 1537, 622, 1431, 622, 1318, 623, 1241, 621, 1174, 616, 1108, 606, 1046, 588, 968, 563, 908, 547, 845, 532, 782, 519, 732, 513, 679, 511, 620, 519, 565, 532, 509, 553, 418, 605, 340, 640, 263, 665, 210, 678, 141, 682, 93, 680, 43, 673, -16, 660, -18, 609)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="build_zone"]
+polygon = PackedVector2Array(-42, 962, 11, 949, 67, 933, 121, 928, 192, 930, 237, 936, 287, 947, 363, 957, 417, 954, 509, 928, 574, 908, 658, 888, 736, 886, 799, 900, 864, 921, 931, 938, 1013, 953, 1074, 957, 1130, 954, 1210, 935, 1304, 911, 1353, 902, 1405, 897, 1511, 900, 1591, 910, 1670, 930, 1745, 948, 1810, 956, 1871, 956, 1946, 950, 1951, 1016, 1913, 1028, 1844, 1033, 1762, 1024, 1692, 1012, 1618, 993, 1545, 979, 1481, 974, 1415, 976, 1364, 979, 1136, 1033, 1034, 1034, 948, 1017, 867, 1002, 783, 974, 739, 961, 688, 960, 612, 975, 509, 1010, 445, 1027, 395, 1033, 327, 1030, 255, 1016, 192, 1005, 130, 1003, 68, 1008, -19, 1033)
+
 [connection signal="input_event" from="UI/building_block/bank/Area2D" to="UI/building_block/bank" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="UI/building_block/bank/Area2D" to="UI/building_block/bank" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="UI/building_block/bank/Area2D" to="UI/building_block/bank" method="_on_area_2d_mouse_exited"]

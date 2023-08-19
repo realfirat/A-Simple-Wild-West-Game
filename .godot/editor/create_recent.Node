@@ -1,7 +1,8 @@
-Timer
-Node2D
 CollisionPolygon2D
 Area2D
+AudioStreamPlayer2D
+Timer
+Node2D
 Control
 HBoxContainer
 PanelContainer

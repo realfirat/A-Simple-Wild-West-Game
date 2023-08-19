@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/b_townhall.gd" id="1_cinnc"]
 [ext_resource type="Texture2D" uid="uid://bw7xbppioa0rd" path="res://assets/_0011_Town-Hall.png" id="1_srcmi"]
 
-[node name="b_townhall" type="StaticBody2D"]
+[node name="b_townhall" type="Area2D"]
 script = ExtResource("1_cinnc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
