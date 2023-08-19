@@ -2,6 +2,7 @@ res://scenes/main.tscn
 res://scenes/kovboy.tscn
 res://scenes/b_bank.tscn
 res://scenes/b_saloon.tscn
+<<<<<<< HEAD
 res://scenes/b_townhall.tscn
 res://scenes/b_church.tscn
 res://scenes/b_sheriffoffice.tscn
@@ -16,3 +17,9 @@ res://scenes/building_gosterge/b_saloon.tscn
 res://scenes/building_gosterge/b_townhall.tscn
 res://scenes/building_gosterge/b_church.tscn
 res://scripts/ikon_bank.gd
+=======
+res://scripts/bullet_rifle.gd
+res://scenes/bullet_rifle.tscn
+res://scripts/ikon_saloon.gd
+res://scripts/b_saloon.gd
+>>>>>>> parent of ebb66ce (bina yerleştirmeler tamamlandı)

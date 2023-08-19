@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsq75ws3ku8hd"]
+[gd_scene load_steps=2 format=3 uid="uid://bsq75ws3ku8hd"]
 
+<<<<<<< HEAD:scenes/building_gosterge/b_townhall.tscn
 [ext_resource type="Script" path="res://scripts/b_townhall.gd" id="1_tay6a"]
 [ext_resource type="Texture2D" uid="uid://bw7xbppioa0rd" path="res://assets/_0011_Town-Hall.png" id="2_nspkx"]
 
 [node name="b_townhall" type="StaticBody2D"]
 script = ExtResource("1_tay6a")
+=======
+[ext_resource type="Texture2D" uid="uid://bw7xbppioa0rd" path="res://assets/_0011_Town-Hall.png" id="1_srcmi"]
+
+[node name="b_townhall" type="StaticBody2D"]
+>>>>>>> parent of ebb66ce (bina yerleştirmeler tamamlandı):scenes/b_townhall.tscn
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_nspkx")
@@ -12,10 +18,3 @@ offset = Vector2(0, -112)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-113, 0, -113, -158, -88, -158, -88, -192, -29, -205, -29, -220, 0, -225, 29, -220, 29, -206, 88, -191, 89, -159, 113, -159, 113, 0)
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
-one_shot = true
-autostart = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

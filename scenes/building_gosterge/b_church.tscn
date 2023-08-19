@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwloxn1ffn1pn"]
+[gd_scene load_steps=2 format=3 uid="uid://bwloxn1ffn1pn"]
 
+<<<<<<< HEAD:scenes/building_gosterge/b_church.tscn
 [ext_resource type="Script" path="res://scripts/b_church.gd" id="1_j3yge"]
 [ext_resource type="Texture2D" uid="uid://cwxdqdbecjv5q" path="res://assets/_0010_Church.png" id="2_xwar8"]
 
 [node name="b_church" type="StaticBody2D"]
 script = ExtResource("1_j3yge")
+=======
+[ext_resource type="Texture2D" uid="uid://cwxdqdbecjv5q" path="res://assets/_0010_Church.png" id="1_gbcbc"]
+
+[node name="b_church" type="StaticBody2D"]
+>>>>>>> parent of ebb66ce (bina yerleştirmeler tamamlandı):scenes/b_church.tscn
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-104, 0, -104, -205, -77, -258, -47, -203, -47, -111, 82, -111, 105, -54, 105, 0)
@@ -12,10 +18,3 @@ polygon = PackedVector2Array(-104, 0, -104, -205, -77, -258, -47, -203, -47, -11
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_xwar8")
 offset = Vector2(0, -129)
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
-one_shot = true
-autostart = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
