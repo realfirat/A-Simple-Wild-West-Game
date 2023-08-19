@@ -14,7 +14,7 @@ offset = Vector2(0, -112)
 polygon = PackedVector2Array(-113, 0, -113, -158, -88, -158, -88, -192, -29, -205, -29, -220, 0, -225, 29, -220, 29, -206, 88, -191, 89, -159, 113, -159, 113, 0)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 0.1
 one_shot = true
 autostart = true
 

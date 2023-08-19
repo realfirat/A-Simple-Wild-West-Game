@@ -16,7 +16,7 @@ texture = ExtResource("1_dp1x3")
 offset = Vector2(0, -84)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 0.1
 one_shot = true
 autostart = true
 
