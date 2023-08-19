@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://bsq75ws3ku8hd"]
 
-[ext_resource type="Script" path="res://scripts/b_townhall.gd" id="1_cinnc"]
-[ext_resource type="Texture2D" uid="uid://bw7xbppioa0rd" path="res://assets/_0011_Town-Hall.png" id="1_srcmi"]
+[ext_resource type="Script" path="res://scripts/b_townhall.gd" id="1_tay6a"]
+[ext_resource type="Texture2D" uid="uid://bw7xbppioa0rd" path="res://assets/_0011_Town-Hall.png" id="2_nspkx"]
 
 [node name="b_townhall" type="StaticBody2D"]
-script = ExtResource("1_cinnc")
+script = ExtResource("1_tay6a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_srcmi")
+texture = ExtResource("2_nspkx")
 offset = Vector2(0, -112)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@onready var saloon = preload("res://scenes/saloon.tscn")
+@onready var saloon = preload("res://scenes/buildings/saloon.tscn")
 var is_ready_to_build
 
 func _ready():

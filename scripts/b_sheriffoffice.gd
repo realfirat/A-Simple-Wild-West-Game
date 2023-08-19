@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@onready var sheriff = preload("res://scenes/sheriffoffice.tscn")
+@onready var sheriff = preload("res://scenes/buildings/sheriffoffice.tscn")
 var is_ready_to_build
 
 func _ready():

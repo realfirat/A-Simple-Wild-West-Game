@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://xntgc3aap2il"]
 
-[ext_resource type="Texture2D" uid="uid://cvycur0rehjb7" path="res://assets/_0009_Bank.png" id="1_dp1x3"]
-[ext_resource type="Script" path="res://scripts/b_bank.gd" id="1_ubgom"]
+[ext_resource type="Script" path="res://scripts/b_bank.gd" id="1_udh76"]
+[ext_resource type="Texture2D" uid="uid://cvycur0rehjb7" path="res://assets/_0009_Bank.png" id="2_klphr"]
 
 [node name="b_bank" type="StaticBody2D"]
-script = ExtResource("1_ubgom")
+script = ExtResource("1_udh76")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(0, -83.6)
@@ -12,7 +12,7 @@ polygon = PackedVector2Array(-91, -47, -53, -47, -53, -66, -2, -84, 51, -67, 51,
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 0.399994)
-texture = ExtResource("1_dp1x3")
+texture = ExtResource("2_klphr")
 offset = Vector2(0, -84)
 
 [node name="Timer" type="Timer" parent="."]

@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@onready var townhall = preload("res://scenes/townhall.tscn")
+@onready var townhall = preload("res://scenes/buildings/townhall.tscn")
 var is_ready_to_build
 
 func _ready():

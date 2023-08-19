@@ -1,16 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://wtwiya63frfw"]
 
-[ext_resource type="Texture2D" uid="uid://dcnerpsy7vbjj" path="res://assets/_0012_Salon.png" id="1_g0luu"]
-[ext_resource type="Script" path="res://scripts/b_saloon.gd" id="1_j4xgo"]
+[ext_resource type="Script" path="res://scripts/b_saloon.gd" id="1_owo6r"]
+[ext_resource type="Texture2D" uid="uid://dcnerpsy7vbjj" path="res://assets/_0012_Salon.png" id="2_maqfq"]
 
 [node name="b_saloon" type="StaticBody2D"]
-script = ExtResource("1_j4xgo")
+script = ExtResource("1_owo6r")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-86, 102, -85, -60, -47, -60, -42, -78, -26, -95, 0, -102, 28, -94, 41, -80, 47, -60, 85, -60, 86, 102)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_g0luu")
+texture = ExtResource("2_maqfq")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2

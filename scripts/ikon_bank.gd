@@ -1,6 +1,6 @@
 extends Control
 
-@onready var building_bank = preload("res://scenes/b_bank.tscn")
+@onready var building_bank = preload("res://scenes/building_gosterge/b_bank.tscn")
 
 func _on_area_2d_mouse_entered():
 	self.modulate = Color.TOMATO
