@@ -18,6 +18,11 @@ func _process(delta):
 			b_townhall.global_position = global_position
 			get_parent().add_child(b_townhall)
 			queue_free()
+			
+	if has_overlapping_bodies() == true or overlaps_area(get_parent().get_parent().get_node("build_zone")) == true:
+		$Sprite2D.modulate = Color.RED
+	else:
+		$Sprite2D.modulate = Color.PALE_GREEN
 
 func _on_timer_timeout():
 	is_ready_to_build = true
