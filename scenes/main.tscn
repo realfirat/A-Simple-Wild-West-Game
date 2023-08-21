@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://d2br6yx14n0mn"]
+[gd_scene load_steps=29 format=3 uid="uid://d2br6yx14n0mn"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hc6o7"]
 [ext_resource type="Texture2D" uid="uid://ccc3j236c8jin" path="res://assets/_0017_Layer-0.png" id="2_uejij"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://0fsr5mdmbap7" path="res://assets/kovboy_14temmuz_0003_2-copy.png" id="19_h0kwv"]
 [ext_resource type="Script" path="res://scripts/top_bar.gd" id="20_4a77u"]
 [ext_resource type="Texture2D" uid="uid://csrndtk0f6gja" path="res://assets/ustbar_bg.png" id="20_whiyo"]
+[ext_resource type="Texture2D" uid="uid://baacltsbox5g" path="res://assets/sag_top_bar.png" id="21_fkkjo"]
 [ext_resource type="FontFile" uid="uid://boui4cb0lutjf" path="res://fonts/Cowboy Manero.otf" id="21_hqvvg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8afdw"]
@@ -212,6 +213,11 @@ polygon = PackedVector2Array(-545, 0, -469, -77, -392, 0, -468, 77)
 [node name="top_bar" type="Node2D" parent="UI"]
 script = ExtResource("20_4a77u")
 
+[node name="SagTopBar" type="Sprite2D" parent="UI/top_bar"]
+position = Vector2(1198, 19)
+scale = Vector2(1.19624, 1.19624)
+texture = ExtResource("21_fkkjo")
+
 [node name="Sprite2D" type="Sprite2D" parent="UI/top_bar"]
 position = Vector2(408, 36.75)
 scale = Vector2(0.75, 0.75)
@@ -228,7 +234,7 @@ value = 50.0
 rounded = true
 show_percentage = false
 
-[node name="Label" type="Label" parent="UI/top_bar"]
+[node name="score" type="Label" parent="UI/top_bar"]
 offset_left = 596.0
 offset_top = 21.0
 offset_right = 763.0
@@ -240,6 +246,81 @@ theme_override_constants/outline_size = 8
 theme_override_constants/shadow_outline_size = 15
 theme_override_fonts/font = ExtResource("21_hqvvg")
 theme_override_font_sizes/font_size = 30
+text = "2500"
+horizontal_alignment = 1
+
+[node name="dollar" type="Label" parent="UI/top_bar"]
+offset_left = 989.0
+offset_top = 38.0
+offset_right = 1097.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0.992157, 0.854902, 0.72549, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("21_hqvvg")
+theme_override_font_sizes/font_size = 20
+text = "2500"
+horizontal_alignment = 1
+
+[node name="justice" type="Label" parent="UI/top_bar"]
+offset_left = 1196.0
+offset_top = 38.0
+offset_right = 1304.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0.992157, 0.854902, 0.72549, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("21_hqvvg")
+theme_override_font_sizes/font_size = 20
+text = "2500"
+horizontal_alignment = 1
+
+[node name="fun" type="Label" parent="UI/top_bar"]
+offset_left = 1388.0
+offset_top = 38.0
+offset_right = 1496.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0.992157, 0.854902, 0.72549, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("21_hqvvg")
+theme_override_font_sizes/font_size = 20
+text = "2500"
+horizontal_alignment = 1
+
+[node name="independence" type="Label" parent="UI/top_bar"]
+offset_left = 1593.0
+offset_top = 38.0
+offset_right = 1701.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0.992157, 0.854902, 0.72549, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("21_hqvvg")
+theme_override_font_sizes/font_size = 20
+text = "2500"
+horizontal_alignment = 1
+
+[node name="faith" type="Label" parent="UI/top_bar"]
+offset_left = 1787.0
+offset_top = 38.0
+offset_right = 1895.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0.992157, 0.854902, 0.72549, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("21_hqvvg")
+theme_override_font_sizes/font_size = 20
 text = "2500"
 horizontal_alignment = 1
 
