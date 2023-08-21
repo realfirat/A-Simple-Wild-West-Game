@@ -17,6 +17,7 @@ func _process(delta):
 			if ready_to_change_cursor:
 				Input.set_custom_mouse_cursor(aim, 0, Vector2(25, 25))
 				ready_to_change_cursor = false
+				global_variables.is_a_building_selected = 0
 		else:
 			$UI/building_grid.visible = true
 			if ready_to_change_cursor:

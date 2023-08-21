@@ -1,11 +1,53 @@
-[gd_scene load_steps=2 format=3 uid="uid://cch2xqdea1kg0"]
+[gd_scene load_steps=6 format=3 uid="uid://cch2xqdea1kg0"]
 
+[ext_resource type="Script" path="res://scripts/saloon.gd" id="1_ohpi6"]
 [ext_resource type="Texture2D" uid="uid://dcnerpsy7vbjj" path="res://assets/_0012_Salon.png" id="1_ymarl"]
+[ext_resource type="Texture2D" uid="uid://cbakw5encpbwt" path="res://assets/duman.png" id="3_qeii6"]
+
+[sub_resource type="Curve" id="Curve_ir0fi"]
+_data = [Vector2(0.00396825, 1), 0.0, 0.190521, 0, 0, Vector2(0.68254, 1), 0.0, 0.0, 0, 0, Vector2(0.996032, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_7o8qk"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="b_saloon" type="StaticBody2D"]
+script = ExtResource("1_ohpi6")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-86, 102, -85, -60, -47, -60, -42, -78, -26, -95, 0, -102, 28, -94, 41, -80, 47, -60, 85, -60, 86, 102)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 102)
 texture = ExtResource("1_ymarl")
+offset = Vector2(0, -102)
+
+[node name="smoke" type="CPUParticles2D" parent="."]
+position = Vector2(0, 102)
+emitting = false
+amount = 3
+lifetime = 1.5
+one_shot = true
+speed_scale = 2.0
+explosiveness = 0.15
+randomness = 0.21
+lifetime_randomness = 0.15
+texture = ExtResource("3_qeii6")
+gravity = Vector2(-300, 0)
+scale_amount_curve = SubResource("Curve_ir0fi")
+color_ramp = SubResource("Gradient_7o8qk")
+
+[node name="smoke2" type="CPUParticles2D" parent="."]
+position = Vector2(0, 102)
+emitting = false
+amount = 3
+lifetime = 1.5
+one_shot = true
+speed_scale = 2.0
+explosiveness = 0.15
+randomness = 0.21
+lifetime_randomness = 0.15
+texture = ExtResource("3_qeii6")
+gravity = Vector2(300, 0)
+scale_amount_curve = SubResource("Curve_ir0fi")
+color_ramp = SubResource("Gradient_7o8qk")

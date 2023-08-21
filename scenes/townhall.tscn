@@ -1,8 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://nqb8e1pa4xom"]
+[gd_scene load_steps=6 format=3 uid="uid://nqb8e1pa4xom"]
 
 [ext_resource type="Texture2D" uid="uid://bw7xbppioa0rd" path="res://assets/_0011_Town-Hall.png" id="1_i4erq"]
+[ext_resource type="Script" path="res://scripts/townhall.gd" id="1_ip783"]
+[ext_resource type="Texture2D" uid="uid://cbakw5encpbwt" path="res://assets/duman.png" id="2_fr0dv"]
+
+[sub_resource type="Curve" id="Curve_mh8rk"]
+_data = [Vector2(0.00396825, 1), 0.0, 0.190521, 0, 0, Vector2(0.68254, 1), 0.0, 0.0, 0, 0, Vector2(0.996032, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_ayg2j"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="b_townhall" type="StaticBody2D"]
+script = ExtResource("1_ip783")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_i4erq")
@@ -10,3 +20,31 @@ offset = Vector2(0, -112)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-113, 0, -113, -158, -88, -158, -88, -192, -29, -205, -29, -220, 0, -225, 29, -220, 29, -206, 88, -191, 89, -159, 113, -159, 113, 0)
+
+[node name="smoke" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 3
+lifetime = 1.5
+one_shot = true
+speed_scale = 2.0
+explosiveness = 0.15
+randomness = 0.21
+lifetime_randomness = 0.15
+texture = ExtResource("2_fr0dv")
+gravity = Vector2(-300, 0)
+scale_amount_curve = SubResource("Curve_mh8rk")
+color_ramp = SubResource("Gradient_ayg2j")
+
+[node name="smoke2" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 3
+lifetime = 1.5
+one_shot = true
+speed_scale = 2.0
+explosiveness = 0.15
+randomness = 0.21
+lifetime_randomness = 0.15
+texture = ExtResource("2_fr0dv")
+gravity = Vector2(300, 0)
+scale_amount_curve = SubResource("Curve_mh8rk")
+color_ramp = SubResource("Gradient_ayg2j")

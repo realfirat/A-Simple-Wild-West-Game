@@ -1,8 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://xfsnceor6dyd"]
+[gd_scene load_steps=6 format=3 uid="uid://xfsnceor6dyd"]
 
+[ext_resource type="Script" path="res://scripts/church.gd" id="1_1boln"]
 [ext_resource type="Texture2D" uid="uid://cwxdqdbecjv5q" path="res://assets/_0010_Church.png" id="1_82nr4"]
+[ext_resource type="Texture2D" uid="uid://cbakw5encpbwt" path="res://assets/duman.png" id="3_6sno5"]
+
+[sub_resource type="Curve" id="Curve_rydcy"]
+_data = [Vector2(0.00396825, 1), 0.0, 0.190521, 0, 0, Vector2(0.68254, 1), 0.0, 0.0, 0, 0, Vector2(0.996032, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_0yo08"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="b_church" type="StaticBody2D"]
+script = ExtResource("1_1boln")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-104, 0, -104, -205, -77, -258, -47, -203, -47, -111, 82, -111, 105, -54, 105, 0)
@@ -10,3 +20,31 @@ polygon = PackedVector2Array(-104, 0, -104, -205, -77, -258, -47, -203, -47, -11
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_82nr4")
 offset = Vector2(0, -129)
+
+[node name="smoke" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 3
+lifetime = 1.5
+one_shot = true
+speed_scale = 2.0
+explosiveness = 0.15
+randomness = 0.21
+lifetime_randomness = 0.15
+texture = ExtResource("3_6sno5")
+gravity = Vector2(-300, 0)
+scale_amount_curve = SubResource("Curve_rydcy")
+color_ramp = SubResource("Gradient_0yo08")
+
+[node name="smoke2" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 3
+lifetime = 1.5
+one_shot = true
+speed_scale = 2.0
+explosiveness = 0.15
+randomness = 0.21
+lifetime_randomness = 0.15
+texture = ExtResource("3_6sno5")
+gravity = Vector2(300, 0)
+scale_amount_curve = SubResource("Curve_rydcy")
+color_ramp = SubResource("Gradient_0yo08")

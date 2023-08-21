@@ -1,16 +1,2 @@
 res://scenes/main.tscn
-res://scenes/b_bank.tscn
-res://scenes/b_saloon.tscn
-res://scenes/b_townhall.tscn
-res://scenes/b_church.tscn
-res://scenes/b_sheriffoffice.tscn
-res://scenes/bank.tscn
-res://scenes/church.tscn
-res://scenes/saloon.tscn
-res://scenes/sheriffoffice.tscn
-res://scenes/townhall.tscn
-res://scripts/b_bank.gd
-res://scripts/b_church.gd
-res://scripts/b_saloon.gd
-res://scripts/b_sheriffoffice.gd
-res://scripts/b_townhall.gd
+res://scenes/kovboy.tscn
