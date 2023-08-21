@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d2br6yx14n0mn"]
+[gd_scene load_steps=28 format=3 uid="uid://d2br6yx14n0mn"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hc6o7"]
 [ext_resource type="Texture2D" uid="uid://ccc3j236c8jin" path="res://assets/_0017_Layer-0.png" id="2_uejij"]
@@ -19,6 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://c4r26v2dlsnwc" path="res://assets/kovboy_14temmuz_0000_5-copy.png" id="17_jmwlx"]
 [ext_resource type="Script" path="res://scripts/ikon_townhall.gd" id="18_khpkp"]
 [ext_resource type="Texture2D" uid="uid://0fsr5mdmbap7" path="res://assets/kovboy_14temmuz_0003_2-copy.png" id="19_h0kwv"]
+[ext_resource type="Script" path="res://scripts/top_bar.gd" id="20_4a77u"]
+[ext_resource type="Texture2D" uid="uid://csrndtk0f6gja" path="res://assets/ustbar_bg.png" id="20_whiyo"]
+[ext_resource type="FontFile" uid="uid://boui4cb0lutjf" path="res://fonts/Cowboy Manero.otf" id="21_hqvvg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8afdw"]
 size = Vector2(274, 1203)
@@ -28,6 +31,20 @@ size = Vector2(288, 1305)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_psa0j"]
 size = Vector2(2281.5, 313)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8272p"]
+bg_color = Color(0.392157, 0.156863, 0.0313726, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.827451, 0.239216, 0.0196078, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hrus8"]
+bg_color = Color(0.933333, 0.419608, 0.294118, 1)
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0.827451, 0.239216, 0.0196078, 1)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_hc6o7")
@@ -191,6 +208,40 @@ texture = ExtResource("19_h0kwv")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UI/building_block/townhall/Area2D"]
 polygon = PackedVector2Array(-545, 0, -469, -77, -392, 0, -468, 77)
+
+[node name="top_bar" type="Node2D" parent="UI"]
+script = ExtResource("20_4a77u")
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/top_bar"]
+position = Vector2(408, 36.75)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("20_whiyo")
+
+[node name="ProgressBar" type="ProgressBar" parent="UI/top_bar"]
+offset_left = 140.0
+offset_top = 18.0
+offset_right = 472.0
+offset_bottom = 54.0
+theme_override_styles/background = SubResource("StyleBoxFlat_8272p")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hrus8")
+value = 50.0
+rounded = true
+show_percentage = false
+
+[node name="Label" type="Label" parent="UI/top_bar"]
+offset_left = 596.0
+offset_top = 21.0
+offset_right = 763.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.890196, 0.572549, 0.211765, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/font = ExtResource("21_hqvvg")
+theme_override_font_sizes/font_size = 30
+text = "2500"
+horizontal_alignment = 1
 
 [node name="building_layer" type="Node2D" parent="."]
 z_index = 1

@@ -1,14 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://xntgc3aap2il"]
+[gd_scene load_steps=4 format=3 uid="uid://xntgc3aap2il"]
 
 [ext_resource type="Texture2D" uid="uid://cvycur0rehjb7" path="res://assets/_0009_Bank.png" id="1_dp1x3"]
 [ext_resource type="Script" path="res://scripts/b_bank.gd" id="1_ubgom"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y83qx"]
+size = Vector2(213, 57)
+
 [node name="b_bank" type="Area2D"]
 script = ExtResource("1_ubgom")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(0, -83.6)
-polygon = PackedVector2Array(-91, -47, -53, -47, -53, -66, -2, -84, 51, -67, 51, -47, 89, -47, 89, -8, 105, -8, 105, 84, -107, 84, -107, -8, -91, -8)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 0.399994)
@@ -19,5 +18,9 @@ offset = Vector2(0, -84)
 wait_time = 0.1
 one_shot = true
 autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -28.5)
+shape = SubResource("RectangleShape2D_y83qx")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
