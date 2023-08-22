@@ -40,7 +40,7 @@ func _on_fun_area_mouse_exited():
 
 
 func _on_independence_area_mouse_entered():
-	title.text = "INDEPENDENCE"
+	title.text = "FREEDOM"
 	text.text = "You make more money but federal Soldiers will hunt you"
 	self.visible = true
 	global_position = Vector2(1538, 76)
@@ -54,7 +54,7 @@ func _on_faith_area_mouse_entered():
 	title.text = "FAITH"
 	text.text = "You regain some hp but natives will hunt you"
 	self.visible = true
-	global_position = Vector2(1657, 87)
+	global_position = Vector2(1657, 76)
 
 
 func _on_faith_area_mouse_exited():

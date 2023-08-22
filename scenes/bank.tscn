@@ -12,6 +12,7 @@ point_count = 3
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="b_bank" type="StaticBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_8m8gy")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

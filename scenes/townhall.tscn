@@ -12,6 +12,7 @@ point_count = 3
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="b_townhall" type="StaticBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_ip783")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
