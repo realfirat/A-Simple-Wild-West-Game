@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://d2br6yx14n0mn"]
+[gd_scene load_steps=35 format=3 uid="uid://d2br6yx14n0mn"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hc6o7"]
 [ext_resource type="Texture2D" uid="uid://ccc3j236c8jin" path="res://assets/_0017_Layer-0.png" id="2_uejij"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://csrndtk0f6gja" path="res://assets/ustbar_bg.png" id="20_whiyo"]
 [ext_resource type="Texture2D" uid="uid://baacltsbox5g" path="res://assets/sag_top_bar.png" id="21_fkkjo"]
 [ext_resource type="FontFile" uid="uid://boui4cb0lutjf" path="res://fonts/Cowboy Manero.otf" id="21_hqvvg"]
+[ext_resource type="Script" path="res://scripts/info_bg.gd" id="24_4xypx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8afdw"]
 size = Vector2(274, 1203)
@@ -47,8 +48,25 @@ border_width_top = 2
 border_width_bottom = 2
 border_color = Color(0.827451, 0.239216, 0.0196078, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhm4l"]
+size = Vector2(166, 57)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtfkp"]
+size = Vector2(167, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5dy58"]
+size = Vector2(149, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnwt7"]
+size = Vector2(166, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i0tpu"]
+size = Vector2(153, 59)
+
 [node name="main" type="Node2D"]
 script = ExtResource("1_hc6o7")
+metadata/_edit_horizontal_guides_ = []
+metadata/_edit_vertical_guides_ = []
 
 [node name="bg_sky" type="Sprite2D" parent="."]
 z_index = -20
@@ -264,6 +282,12 @@ theme_override_font_sizes/font_size = 20
 text = "2500"
 horizontal_alignment = 1
 
+[node name="dollar_area" type="Area2D" parent="UI/top_bar/dollar"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/top_bar/dollar/dollar_area"]
+position = Vector2(28, 9.5)
+shape = SubResource("RectangleShape2D_yhm4l")
+
 [node name="justice" type="Label" parent="UI/top_bar"]
 offset_left = 1196.0
 offset_top = 38.0
@@ -278,6 +302,12 @@ theme_override_fonts/font = ExtResource("21_hqvvg")
 theme_override_font_sizes/font_size = 20
 text = "2500"
 horizontal_alignment = 1
+
+[node name="justice_area" type="Area2D" parent="UI/top_bar/justice"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/top_bar/justice/justice_area"]
+position = Vector2(26.5, 8)
+shape = SubResource("RectangleShape2D_vtfkp")
 
 [node name="fun" type="Label" parent="UI/top_bar"]
 offset_left = 1388.0
@@ -294,6 +324,12 @@ theme_override_font_sizes/font_size = 20
 text = "2500"
 horizontal_alignment = 1
 
+[node name="fun_area" type="Area2D" parent="UI/top_bar/fun"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/top_bar/fun/fun_area"]
+position = Vector2(35.5, 8.5)
+shape = SubResource("RectangleShape2D_5dy58")
+
 [node name="independence" type="Label" parent="UI/top_bar"]
 offset_left = 1593.0
 offset_top = 38.0
@@ -309,6 +345,12 @@ theme_override_font_sizes/font_size = 20
 text = "2500"
 horizontal_alignment = 1
 
+[node name="independence_area" type="Area2D" parent="UI/top_bar/independence"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/top_bar/independence/independence_area"]
+position = Vector2(28, 8.5)
+shape = SubResource("RectangleShape2D_hnwt7")
+
 [node name="faith" type="Label" parent="UI/top_bar"]
 offset_left = 1787.0
 offset_top = 38.0
@@ -323,6 +365,65 @@ theme_override_fonts/font = ExtResource("21_hqvvg")
 theme_override_font_sizes/font_size = 20
 text = "2500"
 horizontal_alignment = 1
+
+[node name="faith_area" type="Area2D" parent="UI/top_bar/faith"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/top_bar/faith/faith_area"]
+position = Vector2(34.5, 8.5)
+shape = SubResource("RectangleShape2D_i0tpu")
+
+[node name="info_box" type="Node2D" parent="UI"]
+position = Vector2(-277, -133)
+
+[node name="info_bg" type="ColorRect" parent="UI/info_box"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.87451)
+offset_left = -131.0
+offset_right = 133.0
+offset_bottom = 122.0
+pivot_offset = Vector2(134, 61)
+color = Color(0.133333, 0.027451, 0.00784314, 1)
+script = ExtResource("24_4xypx")
+
+[node name="info_text" type="Label" parent="UI/info_box/info_bg"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 37.0
+offset_right = -9.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.921569, 0.6, 0.415686, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -7
+theme_override_font_sizes/font_size = 21
+text = "Textasf 
+f sasfasf"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 2
+
+[node name="info_title" type="Label" parent="UI/info_box/info_bg"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 12.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.784314, 0.294118, 0.286275, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("21_hqvvg")
+theme_override_font_sizes/font_size = 28
+text = "asdasd"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="building_layer" type="Node2D" parent="."]
 z_index = 1
@@ -350,3 +451,13 @@ polygon = PackedVector2Array(-42, 962, 12, 955, 71, 941, 137, 937, 191, 939, 239
 [connection signal="input_event" from="UI/building_block/townhall/Area2D" to="UI/building_block/townhall" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="UI/building_block/townhall/Area2D" to="UI/building_block/townhall" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="UI/building_block/townhall/Area2D" to="UI/building_block/townhall" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="UI/top_bar/dollar/dollar_area" to="UI/info_box/info_bg" method="_on_dollar_area_mouse_entered"]
+[connection signal="mouse_exited" from="UI/top_bar/dollar/dollar_area" to="UI/info_box/info_bg" method="_on_dollar_area_mouse_exited"]
+[connection signal="mouse_entered" from="UI/top_bar/justice/justice_area" to="UI/info_box/info_bg" method="_on_justice_area_mouse_entered"]
+[connection signal="mouse_exited" from="UI/top_bar/justice/justice_area" to="UI/info_box/info_bg" method="_on_justice_area_mouse_exited"]
+[connection signal="mouse_entered" from="UI/top_bar/fun/fun_area" to="UI/info_box/info_bg" method="_on_fun_area_mouse_entered"]
+[connection signal="mouse_exited" from="UI/top_bar/fun/fun_area" to="UI/info_box/info_bg" method="_on_fun_area_mouse_exited"]
+[connection signal="mouse_entered" from="UI/top_bar/independence/independence_area" to="UI/info_box/info_bg" method="_on_independence_area_mouse_entered"]
+[connection signal="mouse_exited" from="UI/top_bar/independence/independence_area" to="UI/info_box/info_bg" method="_on_independence_area_mouse_exited"]
+[connection signal="mouse_entered" from="UI/top_bar/faith/faith_area" to="UI/info_box/info_bg" method="_on_faith_area_mouse_entered"]
+[connection signal="mouse_exited" from="UI/top_bar/faith/faith_area" to="UI/info_box/info_bg" method="_on_faith_area_mouse_exited"]

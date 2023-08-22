@@ -1,6 +1,9 @@
 res://scenes/main.tscn
+res://scripts/global_variables.gd
+res://scripts/top_bar.gd
 res://scenes/b_bank.tscn
 res://scenes/b_church.tscn
 res://scenes/b_saloon.tscn
 res://scenes/b_sheriffoffice.tscn
 res://scenes/b_townhall.tscn
+res://scripts/info_bg.gd
