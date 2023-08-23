@@ -1,12 +1,9 @@
 res://scenes/main.tscn
-res://scenes/b_bank.tscn
-res://scenes/b_church.tscn
-res://scenes/b_saloon.tscn
-res://scenes/b_sheriffoffice.tscn
-res://scenes/b_townhall.tscn
-res://scripts/info_bg.gd
-res://scenes/townhall.tscn
 res://scenes/bank.tscn
 res://scenes/church.tscn
 res://scenes/saloon.tscn
 res://scenes/sheriffoffice.tscn
+res://scenes/townhall.tscn
+res://scenes/federal.tscn
+res://scripts/federal.gd
+res://scripts/federal_body.gd

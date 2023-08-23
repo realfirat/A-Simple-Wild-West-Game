@@ -1,21 +1,9 @@
-extends CharacterBody2D
+extends Path2D
 
-@onready var nav : NavigationAgent2D = $NavigationAgent2D
-var speed = 200
-var accel = 7
-var player
+var fed_speed = 0.001
 
-func _ready():
-	if get_tree().has_group("player"):
-		player = get_tree().get_nodes_in_group("player")[0]
+func _process(delta):
+	$PathFollow2D.progress_ratio += fed_speed
 
-		
-func _physics_process(delta):
-	var direction = Vector3()
-	nav.target_position = player.global_position
-	
-	direction = nav.get_next_path_position() - global_position
-	direction = direction.normalized()
-	
-	velocity = velocity.lerp(direction * speed, accel * delta)
-	move_and_slide()
+	if $PathFollow2D.progress_ratio > 0.99:
+		queue_free()

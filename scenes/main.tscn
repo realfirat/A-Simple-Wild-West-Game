@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://d2br6yx14n0mn"]
+[gd_scene load_steps=36 format=3 uid="uid://d2br6yx14n0mn"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hc6o7"]
 [ext_resource type="Texture2D" uid="uid://ccc3j236c8jin" path="res://assets/_0017_Layer-0.png" id="2_uejij"]
@@ -64,19 +64,10 @@ size = Vector2(166, 59)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i0tpu"]
 size = Vector2(153, 59)
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_sq5nu"]
-vertices = PackedVector2Array(70, 1003, -63, 1040, -40, 956, 105, 683, -12, 663, 166, 999, 206, 679, 1826, 662, 1939, 695, 1963, 1023, 1884, 1026, 1785, 1028, 1679, 1001, 314, 1017, 291, 655, 423, 1023, 384, 618, 508, 1000, 643, 964, 467, 573, 562, 530, 660, 510, 724, 957, 783, 516, 984, 569, 809, 974, 1131, 1024, 1036, 1023, 914, 1003, 1178, 616, 1341, 978, 1452, 967, 1435, 620, 1629, 631, 1569, 977)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(2, 4, 3), PackedInt32Array(5, 0, 3, 6), PackedInt32Array(7, 8, 9, 10, 11, 12), PackedInt32Array(13, 5, 6, 14, 15), PackedInt32Array(15, 14, 16, 17), PackedInt32Array(18, 17, 16, 19, 20, 21), PackedInt32Array(22, 18, 21, 23, 24), PackedInt32Array(25, 22, 24), PackedInt32Array(26, 27, 28, 25, 24, 29, 30), PackedInt32Array(31, 30, 29, 32, 33), PackedInt32Array(34, 31, 33, 7), PackedInt32Array(12, 34, 7)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-40, 956, -12, 663, 105, 683, 206, 679, 291, 655, 384, 618, 467, 573, 562, 530, 660, 510, 783, 516, 984, 569, 1178, 616, 1435, 620, 1629, 631, 1826, 662, 1939, 695, 1963, 1023, 1884, 1026, 1785, 1028, 1679, 1001, 1569, 977, 1452, 967, 1341, 978, 1131, 1024, 1036, 1023, 914, 1003, 809, 974, 724, 957, 643, 964, 508, 1000, 423, 1023, 314, 1017, 166, 999, 70, 1003, -63, 1040)])
-cell_size = 5.0
-
 [node name="main" type="Node2D"]
 script = ExtResource("1_hc6o7")
 metadata/_edit_horizontal_guides_ = []
 metadata/_edit_vertical_guides_ = []
-
-[node name="federal" parent="." instance=ExtResource("25_oiuur")]
-position = Vector2(550.96, 817.154)
 
 [node name="bg_sky" type="Sprite2D" parent="."]
 z_index = -20
@@ -446,10 +437,7 @@ polygon = PackedVector2Array(1, 617, 47, 627, 102, 633, 169, 633, 231, 624, 300,
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="build_zone"]
 polygon = PackedVector2Array(-42, 962, 12, 955, 71, 941, 137, 937, 191, 939, 239, 946, 291, 956, 364, 966, 425, 965, 521, 938, 581, 915, 661, 897, 734, 895, 793, 907, 858, 929, 938, 951, 1016, 960, 1083, 967, 1172, 955, 1267, 934, 1335, 917, 1390, 910, 1470, 909, 1555, 915, 1629, 928, 1704, 947, 1779, 960, 1860, 965, 1923, 961, 1946, 950, 1951, 1016, 1914, 1021, 1840, 1024, 1759, 1018, 1690, 1005, 1614, 984, 1544, 973, 1479, 968, 1409, 968, 1347, 974, 1134, 1024, 1033, 1024, 952, 1011, 867, 993, 792, 968, 740, 955, 683, 954, 605, 972, 504, 1005, 438, 1021, 378, 1025, 316, 1016, 252, 1008, 189, 997, 123, 996, 55, 1003, -32, 1030)
 
-[node name="navigation_area" type="NavigationRegion2D" parent="." groups=["nav"]]
-z_index = 2
-navigation_polygon = SubResource("NavigationPolygon_sq5nu")
-use_edge_connections = false
+[node name="federal" parent="." instance=ExtResource("25_oiuur")]
 
 [connection signal="input_event" from="UI/building_block/bank/Area2D" to="UI/building_block/bank" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="UI/building_block/bank/Area2D" to="UI/building_block/bank" method="_on_area_2d_mouse_entered"]

@@ -1,22 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://c76041yliujjx"]
+[gd_scene load_steps=7 format=3 uid="uid://c76041yliujjx"]
 
 [ext_resource type="Texture2D" uid="uid://bp55cti3cq6b2" path="res://assets/fed.png" id="1_g67at"]
 [ext_resource type="Script" path="res://scripts/federal.gd" id="1_qp1fn"]
+[ext_resource type="Script" path="res://scripts/federal_body.gd" id="2_ppa4h"]
+[ext_resource type="Texture2D" uid="uid://doe8s8lvl8r3o" path="res://assets/_0003_tufek.png" id="3_bvvbo"]
+
+[sub_resource type="Curve2D" id="Curve2D_q54sr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -69, 1019, -69.7944, 15.5566, 69.7944, -15.5566, 54, 970, -37.9261, -8.37547, 37.9261, 8.37547, 195, 965, -59.8597, 2.64866, 59.8597, -2.64866, 367, 994, 0, 0, 0, 0, 493, 978, -85.3299, 8.83045, 85.3299, -8.83045, 674, 923, 0, 0, 0, 0, 808, 941, -115.258, -12.7279, 115.258, 12.7279, 993, 989, 0, 0, 0, 0, 1147, 992, -59.8463, 5.03968, 59.8463, -5.03968, 1395, 937, -46.6171, -7.55953, 46.6171, 7.55953, 1541, 941, -73.7054, -11.9692, 73.7054, 11.9692, 1764, 989, 0, 0, 0, 0, 2000, 984)
+}
+point_count = 13
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fmi7x"]
 size = Vector2(36, 36)
 
-[node name="federal" type="CharacterBody2D"]
+[node name="federal" type="Path2D"]
+curve = SubResource("Curve2D_q54sr")
 script = ExtResource("1_qp1fn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(-69, 1019)
+rotation = -0.379104
+rotates = false
+loop = false
+
+[node name="federal_body" type="CharacterBody2D" parent="PathFollow2D"]
+rotation = 0.379104
+scale = Vector2(1, 1)
+script = ExtResource("2_ppa4h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/federal_body"]
 position = Vector2(0, 13)
 shape = SubResource("RectangleShape2D_fmi7x")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="PathFollow2D/federal_body"]
 texture = ExtResource("1_g67at")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_postprocessing = 1
-avoidance_enabled = true
-radius = 109.1
+[node name="rifle" type="Sprite2D" parent="PathFollow2D/federal_body"]
+position = Vector2(0, 10)
+texture = ExtResource("3_bvvbo")
+offset = Vector2(9, 6)
