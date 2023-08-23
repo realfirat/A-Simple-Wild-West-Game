@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c76041yliujjx"]
+
+[ext_resource type="Texture2D" uid="uid://bp55cti3cq6b2" path="res://assets/fed.png" id="1_g67at"]
+[ext_resource type="Script" path="res://scripts/federal.gd" id="1_qp1fn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmi7x"]
+size = Vector2(36, 36)
+
+[node name="federal" type="CharacterBody2D"]
+script = ExtResource("1_qp1fn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 13)
+shape = SubResource("RectangleShape2D_fmi7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_g67at")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_postprocessing = 1
+avoidance_enabled = true
+radius = 109.1
