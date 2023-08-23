@@ -11,7 +11,7 @@
 radius = 18.0
 height = 44.0
 
-[node name="kovboy" type="CharacterBody2D"]
+[node name="kovboy" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_d52dx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

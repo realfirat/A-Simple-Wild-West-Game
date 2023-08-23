@@ -1,10 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1692698499
+::res://::1692810341
 icon.svg::CompressedTexture2D::6892901345538170665::1692086041::1692086041::1::::<><>::
 README.md::TextFile::-1::1692086041::0::1::::<><>::
-::res://assets/::1692696349
+::res://assets/::1692812542
 duman.png::CompressedTexture2D::4843678250891453499::1692614265::1692614273::1::::<><>::
 explosion_particle.png::CompressedTexture2D::1010700255204656745::1692086041::1692086041::1::::<><>::
+fed.png::CompressedTexture2D::3503010763833801177::1692812542::1692812542::1::::<><>::
 gun_smoke.png::CompressedTexture2D::789429046168311771::1692086041::1692086041::1::::<><>::
 hammer.png::CompressedTexture2D::776562857708971099::1692266004::1692266004::1::::<><>::
 ikon_bank.png::CompressedTexture2D::9114327097844785966::1692190751::1692190794::1::::<><>::
@@ -40,22 +41,23 @@ _0016_bulut.png::CompressedTexture2D::3317477018917973337::1692086041::169208604
 _0017_Layer-0.png::CompressedTexture2D::4919065420910447561::1692086041::1692086041::1::::<><>::
 ::res://fonts/::1692631246
 Cowboy Manero.otf::FontFile::3410889681415022003::1692631246::1692631246::1::::<><>::
-::res://scenes/::1692696381
+::res://scenes/::1692812499
 bank.tscn::PackedScene::4530221880581296797::1692619254::0::1::::<><>::res://scripts/bank.gd<>uid://cvycur0rehjb7
 bullet_rifle.tscn::PackedScene::1571989033026805384::1692266838::0::1::::<><>::uid://ceqhj0vlklyjk
 bullet_small.tscn::PackedScene::8413592423586100357::1692096601::0::1::::<><>::res://scripts/bullet_small.gd<>uid://bggleygq1bdjd
-b_bank.tscn::PackedScene::1642344800405359103::1692696369::0::1::::<><>::uid://cvycur0rehjb7::::res://assets/_0009_Bank.png<>res://scripts/b_bank.gd
-b_church.tscn::PackedScene::3954175233385881163::1692696369::0::1::::<><>::res://scripts/b_church.gd<>uid://cwxdqdbecjv5q::::res://assets/_0010_Church.png
-b_saloon.tscn::PackedScene::1584729059562484940::1692696369::0::1::::<><>::uid://dcnerpsy7vbjj::::res://assets/_0012_Salon.png<>res://scripts/b_saloon.gd
-b_sheriffoffice.tscn::PackedScene::5712974820340271427::1692696369::0::1::::<><>::res://scripts/b_sheriffoffice.gd<>uid://smru7qg678du::::res://assets/_0008_Sheriff-Office.png
-b_townhall.tscn::PackedScene::3684847615434876469::1692696369::0::1::::<><>::res://scripts/b_townhall.gd<>uid://bw7xbppioa0rd::::res://assets/_0011_Town-Hall.png
+b_bank.tscn::PackedScene::1642344800405359103::1692707313::0::1::::<><>::uid://cvycur0rehjb7::::res://assets/_0009_Bank.png<>res://scripts/b_bank.gd
+b_church.tscn::PackedScene::3954175233385881163::1692707313::0::1::::<><>::res://scripts/b_church.gd<>uid://cwxdqdbecjv5q::::res://assets/_0010_Church.png
+b_saloon.tscn::PackedScene::1584729059562484940::1692707313::0::1::::<><>::uid://dcnerpsy7vbjj::::res://assets/_0012_Salon.png<>res://scripts/b_saloon.gd
+b_sheriffoffice.tscn::PackedScene::5712974820340271427::1692707313::0::1::::<><>::res://scripts/b_sheriffoffice.gd<>uid://smru7qg678du::::res://assets/_0008_Sheriff-Office.png
+b_townhall.tscn::PackedScene::3684847615434876469::1692707313::0::1::::<><>::res://scripts/b_townhall.gd<>uid://bw7xbppioa0rd::::res://assets/_0011_Town-Hall.png
 church.tscn::PackedScene::1625781525521558023::1692619254::0::1::::<><>::res://scripts/church.gd<>uid://cwxdqdbecjv5q
-kovboy.tscn::PackedScene::1546929665086786690::1692622350::0::1::::<><>::res://scripts/kovboy.gd<>uid://c455fdujyy1hg
-main.tscn::PackedScene::9057514052859839041::1692696381::0::1::::<><>::res://scripts/main.gd<>uid://ccc3j236c8jin::::res://assets/_0017_Layer-0.png<>uid://bwdp4ni5epkr0::::res://assets/_0014_arka_daglar.png<>uid://b176o3mdi2joo::::res://assets/_0013_railroad.png<>uid://wblx8v5541rq::::res://scenes/kovboy.tscn<>res://scripts/bullet_counter.gd<>res://scripts/building_grid.gd<>res://scripts/building_block.gd<>uid://d2irel15ci05a::::res://assets/ikon_bg.png<>res://scripts/ikon_bank.gd<>uid://b0x7ydfwx5o52::::res://assets/kovboy_14temmuz_0001_4-copy.png<>res://scripts/ikon_church.gd<>uid://bmeixu3mcgksg::::res://assets/kovboy_14temmuz_0002_3-copy.png<>res://scripts/ikon_saloon.gd<>uid://c6427chalkkew::::res://assets/kovboy_14temmuz_0004_1-copy.png<>res://scripts/ikon_sheriff.gd<>uid://c4r26v2dlsnwc::::res://assets/kovboy_14temmuz_0000_5-copy.png<>res://scripts/ikon_townhall.gd<>uid://0fsr5mdmbap7::::res://assets/kovboy_14temmuz_0003_2-copy.png<>res://scripts/top_bar.gd<>uid://csrndtk0f6gja::::res://assets/ustbar_bg.png<>uid://baacltsbox5g::::res://assets/sag_top_bar.png<>uid://boui4cb0lutjf::::res://fonts/Cowboy Manero.otf
+kovboy.tscn::PackedScene::1546929665086786690::1692810409::0::1::::<><>::res://scripts/kovboy.gd<>uid://c455fdujyy1hg::::res://assets/_0007_kovboy_body.png<>uid://cy6cewtiigx6k::::res://assets/_0004_silah.png<>uid://di0by3nl215cs::::res://assets/_0006_kovboy_kafa.png<>uid://7kdqrhdq0ta1::::res://assets/_0005_kovboy_sapka.png<>res://scripts/gun.gd
+main.tscn::PackedScene::9057514052859839041::1692810941::0::1::::<><>::res://scripts/main.gd<>uid://ccc3j236c8jin::::res://assets/_0017_Layer-0.png<>uid://bwdp4ni5epkr0::::res://assets/_0014_arka_daglar.png<>uid://b176o3mdi2joo::::res://assets/_0013_railroad.png<>uid://wblx8v5541rq::::res://scenes/kovboy.tscn<>res://scripts/bullet_counter.gd<>res://scripts/building_grid.gd<>res://scripts/building_block.gd<>uid://d2irel15ci05a::::res://assets/ikon_bg.png<>res://scripts/ikon_bank.gd<>uid://b0x7ydfwx5o52::::res://assets/kovboy_14temmuz_0001_4-copy.png<>res://scripts/ikon_church.gd<>uid://bmeixu3mcgksg::::res://assets/kovboy_14temmuz_0002_3-copy.png<>res://scripts/ikon_saloon.gd<>uid://c6427chalkkew::::res://assets/kovboy_14temmuz_0004_1-copy.png<>res://scripts/ikon_sheriff.gd<>uid://c4r26v2dlsnwc::::res://assets/kovboy_14temmuz_0000_5-copy.png<>res://scripts/ikon_townhall.gd<>uid://0fsr5mdmbap7::::res://assets/kovboy_14temmuz_0003_2-copy.png<>res://scripts/top_bar.gd<>uid://csrndtk0f6gja::::res://assets/ustbar_bg.png<>uid://baacltsbox5g::::res://assets/sag_top_bar.png<>uid://boui4cb0lutjf::::res://fonts/Cowboy Manero.otf<>res://scripts/info_bg.gd
+federal.tscn::PackedScene::7084451190215181933::1692812499::0::1::::<><>::
 saloon.tscn::PackedScene::4929350976195983389::1692619254::0::1::::<><>::res://scripts/saloon.gd<>uid://dcnerpsy7vbjj
 sheriffoffice.tscn::PackedScene::784167724937045752::1692619290::0::1::::<><>::res://scripts/sheriffoffice.gd<>uid://smru7qg678du
 townhall.tscn::PackedScene::945604910492019084::1692619254::0::1::::<><>::uid://bw7xbppioa0rd
-::res://scripts/::1692635512
+::res://scripts/::1692706871
 bank.gd::GDScript::-1::1692619378::0::1::::<>StaticBody2D<>::
 building_block.gd::GDScript::-1::1692195944::0::1::::<>Node2D<>::
 building_grid.gd::GDScript::-1::1692610244::0::1::::<>Control<>::
@@ -68,16 +70,17 @@ b_saloon.gd::GDScript::-1::1692618051::0::1::::<>Area2D<>::
 b_sheriffoffice.gd::GDScript::-1::1692618051::0::1::::<>Area2D<>::
 b_townhall.gd::GDScript::-1::1692618051::0::1::::<>Area2D<>::
 church.gd::GDScript::-1::1692619378::0::1::::<>StaticBody2D<>::
-global_variables.gd::GDScript::-1::1692635483::0::1::::<>Node<>::
+global_variables.gd::GDScript::-1::1692698650::0::1::::<>Node<>::
 gun.gd::GDScript::-1::1692179914::0::1::::<>Node2D<>::
 ikon_bank.gd::GDScript::-1::1692619323::0::1::::<>Control<>::
 ikon_church.gd::GDScript::-1::1692619329::0::1::::<>Control<>::
 ikon_saloon.gd::GDScript::-1::1692619336::0::1::::<>Control<>::
 ikon_sheriff.gd::GDScript::-1::1692619339::0::1::::<>Control<>::
 ikon_townhall.gd::GDScript::-1::1692619340::0::1::::<>Control<>::
+info_bg.gd::GDScript::-1::1692706871::0::1::::<>ColorRect<>::
 kovboy.gd::GDScript::-1::1692179823::0::1::::<>CharacterBody2D<>::
 main.gd::GDScript::-1::1692617642::0::1::::<>Node2D<>::
 saloon.gd::GDScript::-1::1692619387::0::1::::<>StaticBody2D<>::
 sheriffoffice.gd::GDScript::-1::1692619387::0::1::::<>StaticBody2D<>::
-top_bar.gd::GDScript::-1::1692635512::0::1::::<>Node2D<>::
+top_bar.gd::GDScript::-1::1692700626::0::1::::<>Node2D<>::
 townhall.gd::GDScript::-1::1692619387::0::1::::<>StaticBody2D<>::
