@@ -76,7 +76,7 @@ show_percentage = false
 shape = SubResource("CapsuleShape2D_6m4rp")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 1.9
 autostart = true
 
 [connection signal="area_entered" from="PathFollow2D/federal_body/federal_hitarea" to="." method="_on_federal_hitarea_area_entered"]

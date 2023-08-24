@@ -10,4 +10,4 @@ var justice = 75
 var fun = 100
 var independence = 125
 var faith = 150
-
+var fed_spawner_time = 2
