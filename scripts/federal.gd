@@ -23,5 +23,5 @@ func _on_timer_timeout():
 
 
 func _on_federal_hitarea_area_entered(area):
-	if area.name == "bullet_rifle":
+	if area.is_in_group("bullet"):
 		hp -= 5
