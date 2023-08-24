@@ -1,9 +1,10 @@
 res://scenes/main.tscn
-res://scenes/bank.tscn
-res://scenes/church.tscn
-res://scenes/saloon.tscn
-res://scenes/sheriffoffice.tscn
-res://scenes/townhall.tscn
 res://scenes/federal.tscn
 res://scripts/federal.gd
-res://scripts/federal_body.gd
+res://scenes/bullet_rifle_fed.tscn
+res://scripts/bullet_rifle_fed.gd
+res://scenes/kovboy.tscn
+res://scripts/kovboy.gd
+res://scripts/top_bar.gd
+res://scripts/bullet_rifle.gd
+res://scenes/bullet_rifle.tscn

@@ -47,12 +47,6 @@ func _process(delta):
 			global_variables.is_build_mode = true
 			
 
-
-
-
-
-
-
 func _physics_process(delta):         # ---------- PHYSICS PROCESS
 	velocity = Vector2.ZERO
 	
@@ -72,3 +66,8 @@ func _physics_process(delta):         # ---------- PHYSICS PROCESS
 
 func _on_timer_small_gun_timeout():
 	small_gun_ready = true
+
+
+func _on_player_hitarea_area_entered(area):
+	if area.name == "bullet_rifle_fed":
+		global_variables.hp -= 5

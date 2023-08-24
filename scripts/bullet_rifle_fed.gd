@@ -1,14 +1,15 @@
 extends Area2D
 
 var aim_position
-var bullet_speed = 30
+var bullet_speed = 20
 var bullet_ready = true
+var player
 
 func _ready():
-	aim_position = get_global_mouse_position() - global_position
+	player = get_tree().get_first_node_in_group("player")
+	aim_position = player.global_position - global_position
 	aim_position = aim_position.normalized()
-	global_variables.bullet -= 1
-	look_at(get_global_mouse_position())
+	look_at(player.global_position)
 	$shoot_particle.emitting = true
 	
 func _physics_process(delta):

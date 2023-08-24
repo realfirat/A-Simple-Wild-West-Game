@@ -242,7 +242,7 @@ position = Vector2(408, 36.75)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("20_whiyo")
 
-[node name="ProgressBar" type="ProgressBar" parent="UI/top_bar"]
+[node name="player_hp" type="ProgressBar" parent="UI/top_bar"]
 offset_left = 140.0
 offset_top = 18.0
 offset_right = 472.0

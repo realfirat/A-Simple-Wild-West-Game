@@ -1,7 +1,7 @@
 extends Node2D
 
 func _process(delta):
-	$ProgressBar.value = global_variables.hp
+	$player_hp.value = global_variables.hp
 	$score.text = str(global_variables.score)
 	$dollar.text = str(global_variables.dollar)
 	$justice.text = str(global_variables.justice)
