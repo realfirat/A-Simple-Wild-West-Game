@@ -2,3 +2,5 @@ res://scenes/federal.tscn
 res://scenes/main.tscn
 res://scripts/federal.gd
 res://scenes/bullet_rifle_fed.tscn
+res://scenes/bullet_rifle.tscn
+res://scripts/bullet_rifle.gd
