@@ -6,3 +6,6 @@ res://scripts/fed_spawner.gd
 res://scripts/global_variables.gd
 res://scripts/federal.gd
 res://scripts/federal_sprite.gd
+res://scenes/kovboy.tscn
+res://scripts/kovboy.gd
+res://scenes/bullet_rifle.tscn

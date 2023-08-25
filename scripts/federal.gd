@@ -24,6 +24,6 @@ func _on_timer_timeout():
 
 
 func _on_federal_hitarea_area_entered(area):
-	if area.is_in_group("bullet"):
+	if area.is_in_group("bullet_rifle"):
 		hp -= 5
 		area.queue_free()

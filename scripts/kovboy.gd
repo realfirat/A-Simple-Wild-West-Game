@@ -69,5 +69,6 @@ func _on_timer_small_gun_timeout():
 
 
 func _on_player_hitarea_area_entered(area):
-	if area.name == "bullet_rifle_fed":
+	if area.is_in_group("bullet_rifle_fed"):
 		global_variables.hp -= 5
+		area.queue_free()

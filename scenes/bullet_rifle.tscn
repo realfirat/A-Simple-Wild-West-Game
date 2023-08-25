@@ -11,7 +11,7 @@ size = Vector2(13, 8)
 _data = [Vector2(0, 0.978947), 0.0, 0.0, 0, 0, Vector2(0.952381, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[node name="bullet_rifle" type="Area2D" groups=["bullet"]]
+[node name="bullet_rifle" type="Area2D" groups=["bullet_rifle"]]
 script = ExtResource("1_aotxa")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
