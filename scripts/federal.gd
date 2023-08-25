@@ -5,11 +5,6 @@ var fed_speed = 0.0015
 var hp = 20
 
 func _physics_process(delta):
-	var tween = create_tween()
-	tween.tween_property($PathFollow2D/federal_body/Sprite2D, "rotation", -0.4, 0.5)
-	tween.tween_property($PathFollow2D/federal_body/Sprite2D, "rotation", 0, 0.5)
-	tween.tween_property($PathFollow2D/federal_body/Sprite2D, "rotation", 0.4, 0.5)
-	
 	if not global_variables.is_build_mode:
 		$PathFollow2D.progress_ratio += fed_speed
 
@@ -20,7 +15,7 @@ func _physics_process(delta):
 	
 	if hp <= 0:
 		queue_free()
-
+	
 func _on_timer_timeout():
 	if not global_variables.is_build_mode:
 		var ready_bullet = bullet.instantiate()
