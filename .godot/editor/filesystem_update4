@@ -1,7 +1,4 @@
-res://scenes/main.tscn
-res://scenes/kovboy.tscn
-res://scenes/bullet_rifle_fed.tscn
 res://scenes/federal.tscn
-res://scenes/bullet_rifle.tscn
-res://scripts/global_variables.gd
-res://scripts/fed_spawner.gd
+res://scenes/main.tscn
+res://scripts/federal.gd
+res://scenes/bullet_rifle_fed.tscn
