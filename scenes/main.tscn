@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://d2br6yx14n0mn"]
+[gd_scene load_steps=36 format=3 uid="uid://d2br6yx14n0mn"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hc6o7"]
 [ext_resource type="Texture2D" uid="uid://ccc3j236c8jin" path="res://assets/_0017_Layer-0.png" id="2_uejij"]
@@ -24,8 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://baacltsbox5g" path="res://assets/sag_top_bar.png" id="21_fkkjo"]
 [ext_resource type="FontFile" uid="uid://boui4cb0lutjf" path="res://fonts/Cowboy Manero.otf" id="21_hqvvg"]
 [ext_resource type="Script" path="res://scripts/info_bg.gd" id="24_4xypx"]
-[ext_resource type="PackedScene" uid="uid://c76041yliujjx" path="res://scenes/federal.tscn" id="25_oiuur"]
-[ext_resource type="Script" path="res://scripts/fed_spawner.gd" id="25_x5qra"]
+[ext_resource type="Script" path="res://scripts/enemy_spawner.gd" id="25_ulnt8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8afdw"]
 size = Vector2(274, 1203)
@@ -438,11 +437,10 @@ polygon = PackedVector2Array(1, 617, 47, 627, 102, 633, 169, 633, 231, 624, 300,
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="build_zone"]
 polygon = PackedVector2Array(-42, 962, 12, 955, 71, 941, 137, 937, 191, 939, 239, 946, 291, 956, 364, 966, 425, 965, 521, 938, 581, 915, 661, 897, 734, 895, 793, 907, 858, 929, 938, 951, 1016, 960, 1083, 967, 1172, 955, 1267, 934, 1335, 917, 1390, 910, 1470, 909, 1555, 915, 1629, 928, 1704, 947, 1779, 960, 1860, 965, 1923, 961, 1946, 950, 1951, 1016, 1914, 1021, 1840, 1024, 1759, 1018, 1690, 1005, 1614, 984, 1544, 973, 1479, 968, 1409, 968, 1347, 974, 1134, 1024, 1033, 1024, 952, 1011, 867, 993, 792, 968, 740, 955, 683, 954, 605, 972, 504, 1005, 438, 1021, 378, 1025, 316, 1016, 252, 1008, 189, 997, 123, 996, 55, 1003, -32, 1030)
 
-[node name="fed_spawner" type="Node2D" parent="."]
-script = ExtResource("25_x5qra")
-fed = ExtResource("25_oiuur")
+[node name="enemy_spawner" type="Node2D" parent="."]
+script = ExtResource("25_ulnt8")
 
-[node name="Timer" type="Timer" parent="fed_spawner"]
+[node name="Timer" type="Timer" parent="enemy_spawner"]
 autostart = true
 
 [connection signal="input_event" from="UI/building_block/bank/Area2D" to="UI/building_block/bank" method="_on_area_2d_input_event"]
@@ -470,4 +468,4 @@ autostart = true
 [connection signal="mouse_exited" from="UI/top_bar/independence/independence_area" to="UI/info_box/info_bg" method="_on_independence_area_mouse_exited"]
 [connection signal="mouse_entered" from="UI/top_bar/faith/faith_area" to="UI/info_box/info_bg" method="_on_faith_area_mouse_entered"]
 [connection signal="mouse_exited" from="UI/top_bar/faith/faith_area" to="UI/info_box/info_bg" method="_on_faith_area_mouse_exited"]
-[connection signal="timeout" from="fed_spawner/Timer" to="fed_spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="enemy_spawner/Timer" to="enemy_spawner" method="_on_timer_timeout"]

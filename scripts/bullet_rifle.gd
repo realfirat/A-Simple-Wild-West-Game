@@ -13,6 +13,7 @@ func _ready():
 	
 func _physics_process(delta):
 		global_position += aim_position * bullet_speed
+		rotation += 0.01
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()

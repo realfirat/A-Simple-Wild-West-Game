@@ -9,3 +9,7 @@ res://scripts/federal_sprite.gd
 res://scenes/kovboy.tscn
 res://scripts/kovboy.gd
 res://scenes/bullet_rifle.tscn
+res://scenes/native.tscn
+res://scenes/balta.tscn
+res://scripts/bullet_rifle.gd
+res://scripts/enemy_spawner.gd
