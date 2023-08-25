@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://g368348mfoss"]
+[gd_scene load_steps=9 format=3 uid="uid://g368348mfoss"]
 
-[ext_resource type="Script" path="res://scripts/federal.gd" id="1_43ou3"]
-[ext_resource type="Script" path="res://scripts/federal_body.gd" id="2_hmn1w"]
+[ext_resource type="Script" path="res://scripts/native.gd" id="1_6duff"]
+[ext_resource type="Script" path="res://scripts/native_body.gd" id="2_q2we4"]
 [ext_resource type="Texture2D" uid="uid://bf1l2u5yu8p3" path="res://assets/native.png" id="3_2owc2"]
-[ext_resource type="Texture2D" uid="uid://buiu7abh67c54" path="res://assets/balta.png" id="4_1sskt"]
 
 [sub_resource type="Curve2D" id="Curve2D_q54sr"]
 _data = {
@@ -34,7 +33,7 @@ height = 64.0
 
 [node name="native" type="Path2D"]
 curve = SubResource("Curve2D_q54sr")
-script = ExtResource("1_43ou3")
+script = ExtResource("1_6duff")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
 position = Vector2(-69, 1019)
@@ -44,7 +43,7 @@ loop = false
 
 [node name="native_body" type="CharacterBody2D" parent="PathFollow2D"]
 rotation = 0.379104
-script = ExtResource("2_hmn1w")
+script = ExtResource("2_q2we4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/native_body"]
 position = Vector2(0, 13)
@@ -52,11 +51,6 @@ shape = SubResource("RectangleShape2D_fmi7x")
 
 [node name="Sprite2D" type="Sprite2D" parent="PathFollow2D/native_body"]
 texture = ExtResource("3_2owc2")
-
-[node name="rifle" type="Sprite2D" parent="PathFollow2D/native_body"]
-position = Vector2(0, 8)
-texture = ExtResource("4_1sskt")
-offset = Vector2(16, 5)
 
 [node name="hp_bar" type="ProgressBar" parent="PathFollow2D/native_body"]
 offset_left = -25.0
@@ -79,5 +73,5 @@ shape = SubResource("CapsuleShape2D_6m4rp")
 wait_time = 1.9
 autostart = true
 
-[connection signal="area_entered" from="PathFollow2D/native_body/native_hitarea" to="." method="_on_federal_hitarea_area_entered"]
+[connection signal="area_entered" from="PathFollow2D/native_body/native_hitarea" to="." method="_on_native_hitarea_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

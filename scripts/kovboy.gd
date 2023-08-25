@@ -72,3 +72,6 @@ func _on_player_hitarea_area_entered(area):
 	if area.is_in_group("bullet_rifle_fed"):
 		global_variables.hp -= 5
 		area.queue_free()
+	if area.is_in_group("balta"):
+		global_variables.hp -= 10
+		area.queue_free()
