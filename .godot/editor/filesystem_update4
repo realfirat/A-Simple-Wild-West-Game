@@ -6,3 +6,11 @@ res://scripts/federal_reverse.gd
 res://scenes/native_reverse.tscn
 res://scripts/native_reverse.gd
 res://scripts/enemy_spawner.gd
+res://scripts/global_variables.gd
+res://scenes/native.tscn
+res://scripts/native.gd
+res://scenes/federal.tscn
+res://scripts/federal.gd
+res://scenes/bandit.tscn
+res://scenes/bullet_rifle.tscn
+res://scripts/bullet_rifle.gd

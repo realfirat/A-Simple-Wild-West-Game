@@ -2,7 +2,7 @@ extends Path2D
 
 var fed_speed = -0.0015
 @onready var fed_bullet = preload("res://scenes/bullet_rifle_fed.tscn")
-var hp = 20
+var hp = 40
 
 func _physics_process(delta):
 	if not global_variables.is_build_mode:

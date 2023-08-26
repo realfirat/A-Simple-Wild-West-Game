@@ -2,7 +2,7 @@ extends Path2D
 
 var fed_speed = 0.0025
 @onready var balta = preload("res://scenes/balta.tscn")
-var hp = 20
+var hp = 30
 
 func _physics_process(delta):
 	if not global_variables.is_build_mode:
