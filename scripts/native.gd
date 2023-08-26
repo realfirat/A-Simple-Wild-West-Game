@@ -14,6 +14,7 @@ func _physics_process(delta):
 	$PathFollow2D/native_body/hp_bar.value = hp
 	
 	if hp <= 0:
+		global_variables.score += 15
 		queue_free()
 	
 func _on_timer_timeout():

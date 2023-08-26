@@ -14,3 +14,4 @@ res://scripts/federal.gd
 res://scenes/bandit.tscn
 res://scenes/bullet_rifle.tscn
 res://scripts/bullet_rifle.gd
+res://scripts/bandit.gd
