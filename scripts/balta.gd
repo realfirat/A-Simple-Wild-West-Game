@@ -8,10 +8,11 @@ var player
 func _ready():
 	if get_tree().has_group("player"):
 		player = get_tree().get_first_node_in_group("player")
-	aim_position = player.global_position - global_position
-	aim_position = aim_position.normalized()
+		aim_position = player.global_position - global_position
+		aim_position = aim_position.normalized()
 	
 func _physics_process(delta):
+	if not global_variables.is_build_mode:
 		global_position += aim_position * bullet_speed
 		rotation += 0.04
 

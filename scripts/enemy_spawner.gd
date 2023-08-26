@@ -2,7 +2,8 @@ extends Node2D
 
 @onready var fed = preload("res://scenes/federal.tscn")
 @onready var native = preload("res://scenes/native.tscn")
-@onready var enemies = [fed, native]
+@onready var bandit = preload("res://scenes/bandit.tscn")
+@onready var enemies = [fed, native, bandit]
 
 
 func _physics_process(delta):

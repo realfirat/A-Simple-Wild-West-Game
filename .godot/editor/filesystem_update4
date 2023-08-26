@@ -5,10 +5,8 @@ res://scenes/federal.tscn
 res://scenes/kovboy.tscn
 res://scenes/native.tscn
 res://scenes/balta.tscn
-res://scripts/enemy_spawner.gd
-res://scripts/federal.gd
-res://scripts/native.gd
-res://scripts/native_body.gd
-res://scripts/bullet_rifle.gd
 res://scripts/balta.gd
-res://scripts/kovboy.gd
+res://scenes/bandit.tscn
+res://scripts/enemy_spawner.gd
+res://scripts/bandit.gd
+res://scripts/bandit_body.gd
