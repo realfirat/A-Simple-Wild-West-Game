@@ -49,3 +49,10 @@ texture = ExtResource("3_6sno5")
 gravity = Vector2(300, 0)
 scale_amount_curve = SubResource("Curve_rydcy")
 color_ramp = SubResource("Gradient_0yo08")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-104, 0, -104, -205, -77, -258, -47, -203, -47, -111, 82, -111, 105, -54, 105, 0)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

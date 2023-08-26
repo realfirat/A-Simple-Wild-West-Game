@@ -26,3 +26,4 @@ func _process(delta):
 
 func _on_timer_timeout():
 	is_ready_to_build = true
+

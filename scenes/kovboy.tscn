@@ -64,7 +64,7 @@ position = Vector2(-3, -13)
 position = Vector2(0, -13)
 
 [node name="timer_small_gun" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 0.1
 autostart = true
 
 [node name="player_hitarea" type="Area2D" parent="."]
