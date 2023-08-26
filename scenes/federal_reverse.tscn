@@ -1,0 +1,84 @@
+[gd_scene load_steps=10 format=3 uid="uid://h58qfcrn8ya5"]
+
+[ext_resource type="Script" path="res://scripts/federal_reverse.gd" id="1_7ov2t"]
+[ext_resource type="Script" path="res://scripts/federal_body.gd" id="2_u0m5s"]
+[ext_resource type="Texture2D" uid="uid://bp55cti3cq6b2" path="res://assets/fed.png" id="3_i2jxa"]
+[ext_resource type="Texture2D" uid="uid://doe8s8lvl8r3o" path="res://assets/_0003_tufek.png" id="4_btyav"]
+
+[sub_resource type="Curve2D" id="Curve2D_q54sr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -69, 1019, -69.7944, 15.5566, 69.7944, -15.5566, 54, 970, -37.9261, -8.37547, 37.9261, 8.37547, 195, 965, -59.8597, 2.64866, 59.8597, -2.64866, 367, 994, 0, 0, 0, 0, 493, 978, -85.3299, 8.83045, 85.3299, -8.83045, 674, 923, 0, 0, 0, 0, 808, 941, -115.258, -12.7279, 115.258, 12.7279, 993, 989, 0, 0, 0, 0, 1147, 992, -59.8463, 5.03968, 59.8463, -5.03968, 1395, 937, -46.6171, -7.55953, 46.6171, 7.55953, 1541, 941, -73.7054, -11.9692, 73.7054, 11.9692, 1764, 989, 0, 0, 0, 0, 2000, 984)
+}
+point_count = 13
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmi7x"]
+size = Vector2(36, 36)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xkwvq"]
+bg_color = Color(0.223529, 0.180392, 0.160784, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kkrnp"]
+bg_color = Color(0.811765, 0.258824, 0.168627, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6m4rp"]
+radius = 18.0
+height = 64.0
+
+[node name="federal_reverse" type="Path2D"]
+curve = SubResource("Curve2D_q54sr")
+script = ExtResource("1_7ov2t")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(2000, 984)
+rotation = -0.379104
+progress = 2115.97
+rotates = false
+loop = false
+
+[node name="federal_body" type="CharacterBody2D" parent="PathFollow2D"]
+rotation = 0.379104
+script = ExtResource("2_u0m5s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/federal_body"]
+position = Vector2(0, 13)
+shape = SubResource("RectangleShape2D_fmi7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="PathFollow2D/federal_body"]
+texture = ExtResource("3_i2jxa")
+
+[node name="rifle" type="Sprite2D" parent="PathFollow2D/federal_body"]
+position = Vector2(0, 10)
+texture = ExtResource("4_btyav")
+offset = Vector2(9, 6)
+
+[node name="hp_bar" type="ProgressBar" parent="PathFollow2D/federal_body"]
+offset_left = -25.0
+offset_top = -40.0
+offset_right = 26.0
+offset_bottom = -34.0
+theme_override_styles/background = SubResource("StyleBoxFlat_xkwvq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_kkrnp")
+max_value = 20.0
+value = 5.0
+rounded = true
+show_percentage = false
+
+[node name="federal_hitarea" type="Area2D" parent="PathFollow2D/federal_body"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/federal_body/federal_hitarea"]
+shape = SubResource("CapsuleShape2D_6m4rp")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.9
+autostart = true
+
+[connection signal="area_entered" from="PathFollow2D/federal_body/federal_hitarea" to="." method="_on_federal_hitarea_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

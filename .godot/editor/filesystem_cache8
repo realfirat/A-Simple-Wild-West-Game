@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1693043082
+::res://::1693050209
 icon.svg::CompressedTexture2D::6892901345538170665::1689250235::1689250239::1::::<><>::
 README.md::TextFile::-1::1692050863::0::1::::<><>::
 ::res://assets/::1693046974
@@ -44,11 +44,13 @@ _0016_bulut.png::CompressedTexture2D::3317477018917973337::1689250408::168925040
 _0017_Layer-0.png::CompressedTexture2D::4919065420910447561::1689250408::1689250408::1::::<><>::
 ::res://fonts/::1692647304
 Cowboy Manero.otf::FontFile::3410889681415022003::1692647304::1692647304::1::::<><>::
-::res://scenes/::1693047170
-balta.tscn::PackedScene::6090844238442492050::1693043231::0::1::::<><>::res://scripts/balta.gd<>uid://buiu7abh67c54::::res://assets/balta.png
+::res://scenes/::1693050322
+balta.tscn::PackedScene::6090844238442492050::1693043231::0::1::::<><>::res://scripts/balta.gd<>uid://buiu7abh67c54
+bandit.tscn::PackedScene::6924832431617427601::1693048296::0::1::::<><>::res://scripts/bandit.gd<>res://scripts/bandit_body.gd<>uid://bd1rpabgih05p
+bandit_reverse.tscn::PackedScene::2324005527896271921::1693050314::0::1::::<><>::res://scripts/bandit.gd<>res://scripts/bandit_body.gd<>uid://bd1rpabgih05p
 bank.tscn::PackedScene::4530221880581296797::1692819561::0::1::::<><>::res://scripts/bank.gd<>uid://cvycur0rehjb7
-bullet_rifle.tscn::PackedScene::1571989033026805384::1693043192::0::1::::<><>::uid://ceqhj0vlklyjk::::res://assets/_0001_bullet_big.png<>res://scripts/bullet_rifle.gd<>uid://onuc548ujewf::::res://assets/explosion_particle.png
-bullet_rifle_fed.tscn::PackedScene::8973086161506625092::1693043192::0::1::::<><>::res://scripts/bullet_rifle_fed.gd<>uid://ceqhj0vlklyjk::::res://assets/_0001_bullet_big.png<>uid://onuc548ujewf::::res://assets/explosion_particle.png
+bullet_rifle.tscn::PackedScene::1571989033026805384::1693043192::0::1::::<><>::uid://ceqhj0vlklyjk
+bullet_rifle_fed.tscn::PackedScene::8973086161506625092::1693043192::0::1::::<><>::res://scripts/bullet_rifle_fed.gd<>uid://ceqhj0vlklyjk
 bullet_small.tscn::PackedScene::8413592423586100357::1692048362::0::1::::<><>::res://scripts/bullet_small.gd<>uid://bggleygq1bdjd
 b_bank.tscn::PackedScene::1642344800405359103::1692734579::0::1::::<><>::uid://cvycur0rehjb7
 b_church.tscn::PackedScene::3954175233385881163::1692734579::0::1::::<><>::res://scripts/b_church.gd<>uid://cwxdqdbecjv5q
@@ -56,16 +58,19 @@ b_saloon.tscn::PackedScene::1584729059562484940::1692734579::0::1::::<><>::uid:/
 b_sheriffoffice.tscn::PackedScene::5712974820340271427::1692734579::0::1::::<><>::res://scripts/b_sheriffoffice.gd<>uid://smru7qg678du
 b_townhall.tscn::PackedScene::3684847615434876469::1692734579::0::1::::<><>::res://scripts/b_townhall.gd<>uid://bw7xbppioa0rd
 church.tscn::PackedScene::1625781525521558023::1692819561::0::1::::<><>::res://scripts/church.gd<>uid://cwxdqdbecjv5q
-federal.tscn::PackedScene::7084451190215181933::1693043192::0::1::::<><>::uid://bp55cti3cq6b2::::res://assets/fed.png<>res://scripts/federal.gd<>res://scripts/federal_body.gd<>uid://doe8s8lvl8r3o::::res://assets/_0003_tufek.png
-kovboy.tscn::PackedScene::1546929665086786690::1693043192::0::1::::<><>::res://scripts/kovboy.gd<>uid://c455fdujyy1hg::::res://assets/_0007_kovboy_body.png<>uid://cy6cewtiigx6k::::res://assets/_0004_silah.png<>uid://di0by3nl215cs::::res://assets/_0006_kovboy_kafa.png<>uid://7kdqrhdq0ta1::::res://assets/_0005_kovboy_sapka.png<>res://scripts/gun.gd
-main.tscn::PackedScene::9057514052859839041::1693047170::0::1::::<><>::res://scripts/main.gd<>uid://ccc3j236c8jin::::res://assets/_0017_Layer-0.png<>uid://bwdp4ni5epkr0::::res://assets/_0014_arka_daglar.png<>uid://b176o3mdi2joo::::res://assets/_0013_railroad.png<>uid://wblx8v5541rq::::res://scenes/kovboy.tscn<>res://scripts/bullet_counter.gd<>res://scripts/building_grid.gd<>res://scripts/building_block.gd<>uid://d2irel15ci05a::::res://assets/ikon_bg.png<>res://scripts/ikon_bank.gd<>uid://b0x7ydfwx5o52::::res://assets/kovboy_14temmuz_0001_4-copy.png<>res://scripts/ikon_church.gd<>uid://bmeixu3mcgksg::::res://assets/kovboy_14temmuz_0002_3-copy.png<>res://scripts/ikon_saloon.gd<>uid://c6427chalkkew::::res://assets/kovboy_14temmuz_0004_1-copy.png<>res://scripts/ikon_sheriff.gd<>uid://c4r26v2dlsnwc::::res://assets/kovboy_14temmuz_0000_5-copy.png<>res://scripts/ikon_townhall.gd<>uid://0fsr5mdmbap7::::res://assets/kovboy_14temmuz_0003_2-copy.png<>res://scripts/top_bar.gd<>uid://csrndtk0f6gja::::res://assets/ustbar_bg.png<>uid://baacltsbox5g::::res://assets/sag_top_bar.png<>uid://boui4cb0lutjf::::res://fonts/Cowboy Manero.otf<>res://scripts/info_bg.gd<>res://scripts/enemy_spawner.gd
-native.tscn::PackedScene::480878313885240438::1693043192::0::1::::<><>::res://scripts/native.gd<>res://scripts/native_body.gd<>uid://bf1l2u5yu8p3::::res://assets/native.png
-bandit.tscn::PackedScene::6924832431617427601::1693047494::0::1::::<><>::res://scripts/federal.gd<>res://scripts/federal_body.gd<>uid://bp55cti3cq6b2::::res://assets/fed.png<>uid://doe8s8lvl8r3o::::res://assets/_0003_tufek.png
+federal.tscn::PackedScene::7084451190215181933::1693048253::0::1::::<><>::uid://bp55cti3cq6b2
+federal_reverse.tscn::PackedScene::555285738049250550::1693050322::0::1::::<><>::res://scripts/federal.gd<>res://scripts/federal_body.gd<>uid://bp55cti3cq6b2::::res://assets/fed.png<>uid://doe8s8lvl8r3o::::res://assets/_0003_tufek.png
+kovboy.tscn::PackedScene::1546929665086786690::1693043192::0::1::::<><>::res://scripts/kovboy.gd<>uid://c455fdujyy1hg
+main.tscn::PackedScene::9057514052859839041::1693050298::0::1::::<><>::res://scripts/main.gd<>uid://ccc3j236c8jin::::res://assets/_0017_Layer-0.png<>uid://bwdp4ni5epkr0::::res://assets/_0014_arka_daglar.png<>uid://b176o3mdi2joo::::res://assets/_0013_railroad.png<>uid://wblx8v5541rq::::res://scenes/kovboy.tscn<>res://scripts/bullet_counter.gd<>res://scripts/building_grid.gd<>res://scripts/building_block.gd<>uid://d2irel15ci05a::::res://assets/ikon_bg.png<>res://scripts/ikon_bank.gd<>uid://b0x7ydfwx5o52::::res://assets/kovboy_14temmuz_0001_4-copy.png<>res://scripts/ikon_church.gd<>uid://bmeixu3mcgksg::::res://assets/kovboy_14temmuz_0002_3-copy.png<>res://scripts/ikon_saloon.gd<>uid://c6427chalkkew::::res://assets/kovboy_14temmuz_0004_1-copy.png<>res://scripts/ikon_sheriff.gd<>uid://c4r26v2dlsnwc::::res://assets/kovboy_14temmuz_0000_5-copy.png<>res://scripts/ikon_townhall.gd<>uid://0fsr5mdmbap7::::res://assets/kovboy_14temmuz_0003_2-copy.png<>res://scripts/top_bar.gd<>uid://csrndtk0f6gja::::res://assets/ustbar_bg.png<>uid://baacltsbox5g::::res://assets/sag_top_bar.png<>uid://boui4cb0lutjf::::res://fonts/Cowboy Manero.otf<>res://scripts/info_bg.gd<>res://scripts/enemy_spawner.gd
+native.tscn::PackedScene::480878313885240438::1693043192::0::1::::<><>::res://scripts/native.gd<>res://scripts/native_body.gd<>uid://bf1l2u5yu8p3
+native_reverse.tscn::PackedScene::8525424393731840125::1693050334::0::1::::<><>::res://scripts/native.gd<>res://scripts/native_body.gd<>uid://bf1l2u5yu8p3::::res://assets/native.png
 saloon.tscn::PackedScene::4929350976195983389::1692819561::0::1::::<><>::res://scripts/saloon.gd<>uid://dcnerpsy7vbjj
 sheriffoffice.tscn::PackedScene::784167724937045752::1692819561::0::1::::<><>::res://scripts/sheriffoffice.gd<>uid://smru7qg678du
 townhall.tscn::PackedScene::945604910492019084::1692819561::0::1::::<><>::uid://bw7xbppioa0rd
-::res://scripts/::1693043188
+::res://scripts/::1693048253
 balta.gd::GDScript::-1::1693043188::0::1::::<>Area2D<>::
+bandit.gd::GDScript::-1::1693048064::0::1::::<>Path2D<>::
+bandit_body.gd::GDScript::-1::1693048253::0::1::::<>CharacterBody2D<>::
 bank.gd::GDScript::-1::1692647304::0::1::::<>StaticBody2D<>::
 building_block.gd::GDScript::-1::1692308233::0::1::::<>Node2D<>::
 building_grid.gd::GDScript::-1::1692447699::0::1::::<>Control<>::
@@ -79,7 +84,7 @@ b_saloon.gd::GDScript::-1::1692647304::0::1::::<>Area2D<>::
 b_sheriffoffice.gd::GDScript::-1::1692647304::0::1::::<>Area2D<>::
 b_townhall.gd::GDScript::-1::1692647304::0::1::::<>Area2D<>::
 church.gd::GDScript::-1::1692647304::0::1::::<>StaticBody2D<>::
-enemy_spawner.gd::GDScript::-1::1693001534::0::1::::<>Node2D<>::
+enemy_spawner.gd::GDScript::-1::1693047633::0::1::::<>Node2D<>::
 federal.gd::GDScript::-1::1693001998::0::1::::<>Path2D<>::
 federal_body.gd::GDScript::-1::1692823627::0::1::::<>CharacterBody2D<>::
 fed_spawner.gd::GDScript::-1::1692997787::0::1::::<>Node2D<>::
