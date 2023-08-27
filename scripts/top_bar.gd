@@ -10,7 +10,7 @@ func _process(delta):
 	$faith.text = str(global_variables.faith)
 	
 	# dollar -> bina yapmaya, kurşun harcamaya yarar
-	# justice -> düşmanlardan daha çok para kazanmaya yarar
+	# justice -> banditleri öldürünce kazanılır, banditler daha güçlü olur, banditlerden daha çok para kazanılır
 	# fun -> turist gelmesini sağlar
-	# independence -> bol para düşüren düşmanlar gelir
-	# faith -> belli bir zamanda can yenilenir
+	# independence -> fedleri öldürünce kazanılır, fedler daha güçlü olur, fedlerden daha çok para kazanılır
+	# faith -> nativeleri öldürünce kazanılır, nativeler daha güçlü olur, nativelerden daha çok para kazanılır

@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://d2br6yx14n0mn"]
+[gd_scene load_steps=43 format=3 uid="uid://d2br6yx14n0mn"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hc6o7"]
 [ext_resource type="Texture2D" uid="uid://ccc3j236c8jin" path="res://assets/_0017_Layer-0.png" id="2_uejij"]
@@ -27,6 +27,11 @@
 [ext_resource type="Script" path="res://scripts/info_bg.gd" id="24_4xypx"]
 [ext_resource type="Script" path="res://scripts/score.gd" id="25_3kemj"]
 [ext_resource type="Script" path="res://scripts/enemy_spawner.gd" id="25_ulnt8"]
+[ext_resource type="Script" path="res://scripts/dollar.gd" id="26_p0k1u"]
+[ext_resource type="Script" path="res://scripts/justice.gd" id="27_484qd"]
+[ext_resource type="Script" path="res://scripts/fun.gd" id="28_dy0js"]
+[ext_resource type="Script" path="res://scripts/independence.gd" id="29_l7eho"]
+[ext_resource type="Script" path="res://scripts/faith.gd" id="30_ntbvv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8afdw"]
 size = Vector2(274, 1203)
@@ -346,7 +351,6 @@ rounded = true
 show_percentage = false
 
 [node name="score" type="Label" parent="UI/top_bar" groups=["score_text"]]
-unique_name_in_owner = true
 offset_left = 596.0
 offset_top = 21.0
 offset_right = 763.0
@@ -363,11 +367,12 @@ text = "2500"
 horizontal_alignment = 1
 script = ExtResource("25_3kemj")
 
-[node name="dollar" type="Label" parent="UI/top_bar"]
+[node name="dollar" type="Label" parent="UI/top_bar" groups=["dollar_text"]]
 offset_left = 989.0
 offset_top = 38.0
 offset_right = 1097.0
 offset_bottom = 75.0
+pivot_offset = Vector2(53, 10)
 theme_override_colors/font_color = Color(0.992157, 0.854902, 0.72549, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -377,6 +382,7 @@ theme_override_fonts/font = ExtResource("21_hqvvg")
 theme_override_font_sizes/font_size = 20
 text = "2500"
 horizontal_alignment = 1
+script = ExtResource("26_p0k1u")
 
 [node name="dollar_area" type="Area2D" parent="UI/top_bar/dollar"]
 
@@ -384,11 +390,12 @@ horizontal_alignment = 1
 position = Vector2(28, 9.5)
 shape = SubResource("RectangleShape2D_yhm4l")
 
-[node name="justice" type="Label" parent="UI/top_bar"]
+[node name="justice" type="Label" parent="UI/top_bar" groups=["justice_text"]]
 offset_left = 1196.0
 offset_top = 38.0
 offset_right = 1304.0
 offset_bottom = 75.0
+pivot_offset = Vector2(53, 10)
 theme_override_colors/font_color = Color(0.992157, 0.854902, 0.72549, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -398,6 +405,7 @@ theme_override_fonts/font = ExtResource("21_hqvvg")
 theme_override_font_sizes/font_size = 20
 text = "2500"
 horizontal_alignment = 1
+script = ExtResource("27_484qd")
 
 [node name="justice_area" type="Area2D" parent="UI/top_bar/justice"]
 
@@ -405,11 +413,12 @@ horizontal_alignment = 1
 position = Vector2(26.5, 8)
 shape = SubResource("RectangleShape2D_vtfkp")
 
-[node name="fun" type="Label" parent="UI/top_bar"]
+[node name="fun" type="Label" parent="UI/top_bar" groups=["fun_text"]]
 offset_left = 1388.0
 offset_top = 38.0
 offset_right = 1496.0
 offset_bottom = 75.0
+pivot_offset = Vector2(53, 9)
 theme_override_colors/font_color = Color(0.992157, 0.854902, 0.72549, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -419,6 +428,7 @@ theme_override_fonts/font = ExtResource("21_hqvvg")
 theme_override_font_sizes/font_size = 20
 text = "2500"
 horizontal_alignment = 1
+script = ExtResource("28_dy0js")
 
 [node name="fun_area" type="Area2D" parent="UI/top_bar/fun"]
 
@@ -426,11 +436,12 @@ horizontal_alignment = 1
 position = Vector2(35.5, 8.5)
 shape = SubResource("RectangleShape2D_5dy58")
 
-[node name="independence" type="Label" parent="UI/top_bar"]
+[node name="independence" type="Label" parent="UI/top_bar" groups=["independence_text"]]
 offset_left = 1593.0
 offset_top = 38.0
 offset_right = 1701.0
 offset_bottom = 75.0
+pivot_offset = Vector2(53, 10)
 theme_override_colors/font_color = Color(0.992157, 0.854902, 0.72549, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -440,6 +451,7 @@ theme_override_fonts/font = ExtResource("21_hqvvg")
 theme_override_font_sizes/font_size = 20
 text = "2500"
 horizontal_alignment = 1
+script = ExtResource("29_l7eho")
 
 [node name="independence_area" type="Area2D" parent="UI/top_bar/independence"]
 
@@ -447,11 +459,12 @@ horizontal_alignment = 1
 position = Vector2(28, 8.5)
 shape = SubResource("RectangleShape2D_hnwt7")
 
-[node name="faith" type="Label" parent="UI/top_bar"]
+[node name="faith" type="Label" parent="UI/top_bar" groups=["faith_text"]]
 offset_left = 1787.0
 offset_top = 38.0
 offset_right = 1895.0
 offset_bottom = 75.0
+pivot_offset = Vector2(53, 10)
 theme_override_colors/font_color = Color(0.992157, 0.854902, 0.72549, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -461,6 +474,7 @@ theme_override_fonts/font = ExtResource("21_hqvvg")
 theme_override_font_sizes/font_size = 20
 text = "2500"
 horizontal_alignment = 1
+script = ExtResource("30_ntbvv")
 
 [node name="faith_area" type="Area2D" parent="UI/top_bar/faith"]
 

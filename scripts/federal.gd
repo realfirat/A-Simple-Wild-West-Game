@@ -16,8 +16,11 @@ func _physics_process(delta):
 	
 	if hp <= 0:
 		global_variables.score += 10
+		global_variables.independence += 10
 		var score_text = get_tree().get_first_node_in_group("score_text")
+		var independence_text = get_tree().get_first_node_in_group("independence_text")
 		score_text.score_changed()
+		independence_text.score_changed()
 		queue_free()
 	
 func _on_timer_timeout():
