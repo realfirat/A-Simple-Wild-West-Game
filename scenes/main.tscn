@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://d2br6yx14n0mn"]
+[gd_scene load_steps=38 format=3 uid="uid://d2br6yx14n0mn"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hc6o7"]
 [ext_resource type="Texture2D" uid="uid://ccc3j236c8jin" path="res://assets/_0017_Layer-0.png" id="2_uejij"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://baacltsbox5g" path="res://assets/sag_top_bar.png" id="21_fkkjo"]
 [ext_resource type="FontFile" uid="uid://boui4cb0lutjf" path="res://fonts/Cowboy Manero.otf" id="21_hqvvg"]
 [ext_resource type="Script" path="res://scripts/info_bg.gd" id="24_4xypx"]
+[ext_resource type="Script" path="res://scripts/score.gd" id="25_3kemj"]
 [ext_resource type="Script" path="res://scripts/enemy_spawner.gd" id="25_ulnt8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8afdw"]
@@ -344,11 +345,13 @@ value = 50.0
 rounded = true
 show_percentage = false
 
-[node name="score" type="Label" parent="UI/top_bar"]
+[node name="score" type="Label" parent="UI/top_bar" groups=["score_text"]]
+unique_name_in_owner = true
 offset_left = 596.0
 offset_top = 21.0
 offset_right = 763.0
 offset_bottom = 58.0
+pivot_offset = Vector2(83, 17)
 theme_override_colors/font_color = Color(0.890196, 0.572549, 0.211765, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -358,6 +361,7 @@ theme_override_fonts/font = ExtResource("21_hqvvg")
 theme_override_font_sizes/font_size = 30
 text = "2500"
 horizontal_alignment = 1
+script = ExtResource("25_3kemj")
 
 [node name="dollar" type="Label" parent="UI/top_bar"]
 offset_left = 989.0

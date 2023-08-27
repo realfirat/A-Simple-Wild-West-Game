@@ -36,7 +36,7 @@ height = 64.0
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.995727, 0.0315789), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[node name="native" type="Path2D"]
+[node name="native_reverse" type="Path2D"]
 curve = SubResource("Curve2D_q54sr")
 script = ExtResource("1_hm1bf")
 
