@@ -25,5 +25,3 @@ func _process(delta):
 				ready_to_change_cursor = false
 	
 	ready_to_change_cursor = true
-		
-	

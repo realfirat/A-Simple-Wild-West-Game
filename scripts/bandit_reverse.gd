@@ -26,5 +26,10 @@ func _on_timer_timeout():
 
 func _on_federal_hitarea_area_entered(area):
 	if area.is_in_group("bullet_rifle"):
+		$PathFollow2D/bandit_body/Sprite2D.modulate = Color.PALE_VIOLET_RED
+		$PathFollow2D/bandit_body/blood_particle.emitting = true
+		$PathFollow2D.progress_ratio += 0.002
 		hp -= 5
 		area.queue_free()
+		await get_tree().create_timer(0.2).timeout
+		$PathFollow2D/bandit_body/Sprite2D.modulate = Color.WHITE

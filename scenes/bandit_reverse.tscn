@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://8d1bcogt6gqr"]
+[gd_scene load_steps=12 format=3 uid="uid://8d1bcogt6gqr"]
 
 [ext_resource type="Script" path="res://scripts/bandit_reverse.gd" id="1_wmpi0"]
 [ext_resource type="Script" path="res://scripts/bandit_body.gd" id="2_qckdp"]
 [ext_resource type="Texture2D" uid="uid://bd1rpabgih05p" path="res://assets/bandit.png" id="3_vdb2p"]
 [ext_resource type="Texture2D" uid="uid://cy6cewtiigx6k" path="res://assets/_0004_silah.png" id="4_bdpnb"]
+[ext_resource type="Texture2D" uid="uid://dw5b4mh66yej8" path="res://assets/blood.png" id="5_0wvxj"]
 
 [sub_resource type="Curve2D" id="Curve2D_q54sr"]
 _data = {
@@ -31,6 +32,10 @@ corner_radius_bottom_left = 5
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6m4rp"]
 radius = 18.0
 height = 64.0
+
+[sub_resource type="Curve" id="Curve_puukw"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.995727, 0.0315789), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="bandit_reverse" type="Path2D"]
 curve = SubResource("Curve2D_q54sr")
@@ -75,6 +80,20 @@ show_percentage = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/bandit_body/bandit_hitarea"]
 shape = SubResource("CapsuleShape2D_6m4rp")
+
+[node name="blood_particle" type="CPUParticles2D" parent="PathFollow2D/bandit_body"]
+emitting = false
+amount = 3
+lifetime = 0.4
+one_shot = true
+explosiveness = 0.58
+randomness = 0.26
+texture = ExtResource("5_0wvxj")
+gravity = Vector2(0, 500)
+initial_velocity_min = 24.0
+initial_velocity_max = 80.0
+angular_velocity_min = -322.56
+scale_amount_curve = SubResource("Curve_puukw")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.5
