@@ -4,10 +4,14 @@ extends Control
 
 func _on_area_2d_mouse_entered():
 	self.modulate = Color.TOMATO
+	var tween = create_tween()
+	tween.tween_property($sheriff_price_tag, "position", Vector2(-408, -60), 0.2)
 
 
 func _on_area_2d_mouse_exited():
 	self.modulate = Color.WHITE
+	var tween = create_tween()
+	tween.tween_property($sheriff_price_tag, "position", Vector2(-451, -17), 0.2)
 
 
 func _on_area_2d_input_event(viewport, event, shape_idx):

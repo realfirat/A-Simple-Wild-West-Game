@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://d2br6yx14n0mn"]
+[gd_scene load_steps=37 format=3 uid="uid://d2br6yx14n0mn"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hc6o7"]
 [ext_resource type="Texture2D" uid="uid://ccc3j236c8jin" path="res://assets/_0017_Layer-0.png" id="2_uejij"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d2irel15ci05a" path="res://assets/ikon_bg.png" id="8_r5o7l"]
 [ext_resource type="Script" path="res://scripts/ikon_bank.gd" id="10_e3prf"]
 [ext_resource type="Texture2D" uid="uid://b0x7ydfwx5o52" path="res://assets/kovboy_14temmuz_0001_4-copy.png" id="11_a6ite"]
+[ext_resource type="Texture2D" uid="uid://omjvbuc1eyd0" path="res://assets/price_tag.png" id="11_owlph"]
 [ext_resource type="Script" path="res://scripts/ikon_church.gd" id="12_d4ry7"]
 [ext_resource type="Texture2D" uid="uid://bmeixu3mcgksg" path="res://assets/kovboy_14temmuz_0002_3-copy.png" id="13_crv5v"]
 [ext_resource type="Script" path="res://scripts/ikon_saloon.gd" id="14_ftrw8"]
@@ -149,6 +150,24 @@ offset_right = 1569.0
 offset_bottom = 1168.0
 script = ExtResource("10_e3prf")
 
+[node name="bank_price_tag" type="Sprite2D" parent="UI/building_block/bank"]
+position = Vector2(14, -17)
+texture = ExtResource("11_owlph")
+
+[node name="Label" type="Label" parent="UI/building_block/bank/bank_price_tag"]
+offset_left = -28.0
+offset_top = 3.0
+offset_right = 25.0
+offset_bottom = 33.0
+rotation = -0.785397
+theme_override_colors/font_color = Color(0.854902, 0.521569, 0.486275, 1)
+theme_override_colors/font_shadow_color = Color(0.470588, 0.152941, 0.0941176, 1)
+theme_override_fonts/font = ExtResource("21_hqvvg")
+text = "50 "
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="ikon_bank" type="Sprite2D" parent="UI/building_block/bank"]
 texture = ExtResource("11_a6ite")
 
@@ -165,6 +184,24 @@ offset_top = 997.0
 offset_right = 1851.0
 offset_bottom = 1168.0
 script = ExtResource("12_d4ry7")
+
+[node name="church_price_tag" type="Sprite2D" parent="UI/building_block/church"]
+position = Vector2(-448, -17)
+texture = ExtResource("11_owlph")
+
+[node name="Label" type="Label" parent="UI/building_block/church/church_price_tag"]
+offset_left = -28.0
+offset_top = 3.0
+offset_right = 25.0
+offset_bottom = 33.0
+rotation = -0.785397
+theme_override_colors/font_color = Color(0.854902, 0.521569, 0.486275, 1)
+theme_override_colors/font_shadow_color = Color(0.470588, 0.152941, 0.0941176, 1)
+theme_override_fonts/font = ExtResource("21_hqvvg")
+text = "50 "
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="ikon_church" type="Sprite2D" parent="UI/building_block/church"]
 position = Vector2(-462, 0)
@@ -184,6 +221,24 @@ offset_right = 1492.0
 offset_bottom = 1169.0
 script = ExtResource("14_ftrw8")
 
+[node name="saloon_price_tag" type="Sprite2D" parent="UI/building_block/saloon"]
+position = Vector2(-449, -17)
+texture = ExtResource("11_owlph")
+
+[node name="Label" type="Label" parent="UI/building_block/saloon/saloon_price_tag"]
+offset_left = -28.0
+offset_top = 3.0
+offset_right = 25.0
+offset_bottom = 33.0
+rotation = -0.785397
+theme_override_colors/font_color = Color(0.854902, 0.521569, 0.486275, 1)
+theme_override_colors/font_shadow_color = Color(0.470588, 0.152941, 0.0941176, 1)
+theme_override_fonts/font = ExtResource("21_hqvvg")
+text = "50 "
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="ikon_saloon" type="Sprite2D" parent="UI/building_block/saloon"]
 position = Vector2(-464, 0)
 texture = ExtResource("15_in6gf")
@@ -202,6 +257,24 @@ offset_right = 2217.0
 offset_bottom = 1168.0
 script = ExtResource("16_qm6ki")
 
+[node name="sheriff_price_tag" type="Sprite2D" parent="UI/building_block/sheriff"]
+position = Vector2(-451, -17)
+texture = ExtResource("11_owlph")
+
+[node name="Label" type="Label" parent="UI/building_block/sheriff/sheriff_price_tag"]
+offset_left = -28.0
+offset_top = 3.0
+offset_right = 25.0
+offset_bottom = 33.0
+rotation = -0.785397
+theme_override_colors/font_color = Color(0.854902, 0.521569, 0.486275, 1)
+theme_override_colors/font_shadow_color = Color(0.470588, 0.152941, 0.0941176, 1)
+theme_override_fonts/font = ExtResource("21_hqvvg")
+text = "50 "
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="ikon_sheriff" type="Sprite2D" parent="UI/building_block/sheriff"]
 position = Vector2(-466, 0)
 texture = ExtResource("17_jmwlx")
@@ -219,6 +292,24 @@ offset_top = 998.0
 offset_right = 1675.0
 offset_bottom = 1169.0
 script = ExtResource("18_khpkp")
+
+[node name="townhall_price_tag" type="Sprite2D" parent="UI/building_block/townhall"]
+position = Vector2(-453, -17)
+texture = ExtResource("11_owlph")
+
+[node name="Label" type="Label" parent="UI/building_block/townhall/townhall_price_tag"]
+offset_left = -28.0
+offset_top = 3.0
+offset_right = 25.0
+offset_bottom = 33.0
+rotation = -0.785397
+theme_override_colors/font_color = Color(0.854902, 0.521569, 0.486275, 1)
+theme_override_colors/font_shadow_color = Color(0.470588, 0.152941, 0.0941176, 1)
+theme_override_fonts/font = ExtResource("21_hqvvg")
+text = "50 "
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="ikon_townhall" type="Sprite2D" parent="UI/building_block/townhall"]
 position = Vector2(-468, 0)
