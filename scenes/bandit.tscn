@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://c5wo8jb0jmf6p"]
+[gd_scene load_steps=13 format=3 uid="uid://c5wo8jb0jmf6p"]
 
 [ext_resource type="Script" path="res://scripts/bandit.gd" id="1_aw1mp"]
 [ext_resource type="Script" path="res://scripts/bandit_body.gd" id="2_83sab"]
+[ext_resource type="PackedScene" uid="uid://3e8h601mebno" path="res://scenes/particle_justice.tscn" id="2_ciliv"]
 [ext_resource type="Texture2D" uid="uid://bd1rpabgih05p" path="res://assets/bandit.png" id="3_dilqg"]
 [ext_resource type="Texture2D" uid="uid://cy6cewtiigx6k" path="res://assets/_0004_silah.png" id="4_gv263"]
 [ext_resource type="Texture2D" uid="uid://dw5b4mh66yej8" path="res://assets/blood.png" id="5_yp0me"]
@@ -93,6 +94,8 @@ initial_velocity_min = 24.0
 initial_velocity_max = 80.0
 angular_velocity_min = -322.56
 scale_amount_curve = SubResource("Curve_0udee")
+
+[node name="particle_justice" parent="PathFollow2D/bandit_body" instance=ExtResource("2_ciliv")]
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.5

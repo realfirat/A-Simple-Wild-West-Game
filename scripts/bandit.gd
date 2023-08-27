@@ -3,6 +3,7 @@ extends Path2D
 var fed_speed = 0.0020
 @onready var fed_bullet = preload("res://scenes/bullet_rifle_fed.tscn")
 var hp = 20
+@onready var bandit_dead = preload("res://scenes/bandit_dead.tscn")
 
 func _physics_process(delta):
 	if not global_variables.is_build_mode:
@@ -20,6 +21,9 @@ func _physics_process(delta):
 		var justice_text = get_tree().get_first_node_in_group("justice_text")
 		score_text.score_changed()
 		justice_text.score_changed()
+		var dead_scene = bandit_dead.instantiate()
+		dead_scene.global_position = $PathFollow2D/bandit_body/Sprite2D.global_position
+		get_parent().add_child(dead_scene)
 		queue_free()
 	
 func _on_timer_timeout():

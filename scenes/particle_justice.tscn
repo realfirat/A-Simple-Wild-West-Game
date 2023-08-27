@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://3e8h601mebno"]
+
+[ext_resource type="Texture2D" uid="uid://tc3f4lvlt6bm" path="res://assets/ikon_justice.png" id="1_8ktcu"]
+
+[sub_resource type="Gradient" id="Gradient_glwhy"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="particle_justice" type="CPUParticles2D"]
+z_index = 50
+z_as_relative = false
+emitting = false
+amount = 1
+one_shot = true
+texture = ExtResource("1_8ktcu")
+gravity = Vector2(0, -200)
+color_ramp = SubResource("Gradient_glwhy")

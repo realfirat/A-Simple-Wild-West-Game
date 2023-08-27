@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsuquuufof83q"]
+
+[ext_resource type="Script" path="res://scripts/fed_dead.gd" id="1_dt25e"]
+[ext_resource type="Texture2D" uid="uid://c4o26yu14h3o" path="res://assets/fed_dead.png" id="2_fpthx"]
+[ext_resource type="PackedScene" uid="uid://3e8h601mebno" path="res://scenes/particle_justice.tscn" id="3_41g6g"]
+[ext_resource type="Texture2D" uid="uid://dciw4mqfoktge" path="res://assets/ikon_independence.png" id="4_a741p"]
+
+[node name="fed_dead" type="Node2D"]
+script = ExtResource("1_dt25e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fpthx")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="particle_independence" parent="." instance=ExtResource("3_41g6g")]
+texture = ExtResource("4_a741p")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

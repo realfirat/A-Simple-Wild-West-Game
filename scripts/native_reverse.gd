@@ -3,6 +3,7 @@ extends Path2D
 var fed_speed = -0.0025
 @onready var balta = preload("res://scenes/balta.tscn")
 var hp = 30
+@onready var native_dead = preload("res://scenes/native_dead.tscn")
 
 func _physics_process(delta):
 	if not global_variables.is_build_mode:
@@ -20,6 +21,9 @@ func _physics_process(delta):
 		var faith_text = get_tree().get_first_node_in_group("faith_text")
 		score_text.score_changed()
 		faith_text.score_changed()
+		var dead_scene = native_dead.instantiate()
+		dead_scene.global_position = $PathFollow2D/native_body/Sprite2D.global_position
+		get_parent().add_child(dead_scene)
 		queue_free()
 	
 func _on_timer_timeout():
