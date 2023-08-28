@@ -51,8 +51,8 @@ func _on_independence_area_mouse_exited():
 
 
 func _on_faith_area_mouse_entered():
-	title.text = "FAITH"
-	text.text = "You regain some hp but natives will hunt you"
+	title.text = "NATIVES"
+	text.text = "If you hunt them, they will hunt you"
 	self.visible = true
 	global_position = Vector2(1657, 76)
 

@@ -22,8 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://0fsr5mdmbap7" path="res://assets/kovboy_14temmuz_0003_2-copy.png" id="19_h0kwv"]
 [ext_resource type="Script" path="res://scripts/top_bar.gd" id="20_4a77u"]
 [ext_resource type="Texture2D" uid="uid://csrndtk0f6gja" path="res://assets/ustbar_bg.png" id="20_whiyo"]
-[ext_resource type="Texture2D" uid="uid://baacltsbox5g" path="res://assets/sag_top_bar.png" id="21_fkkjo"]
 [ext_resource type="FontFile" uid="uid://boui4cb0lutjf" path="res://fonts/Cowboy Manero.otf" id="21_hqvvg"]
+[ext_resource type="Texture2D" uid="uid://dj5ydf5yl30ha" path="res://assets/ustbarr.png" id="23_2b7d7"]
 [ext_resource type="Script" path="res://scripts/info_bg.gd" id="24_4xypx"]
 [ext_resource type="Script" path="res://scripts/score.gd" id="25_3kemj"]
 [ext_resource type="Script" path="res://scripts/enemy_spawner.gd" id="25_ulnt8"]
@@ -332,7 +332,7 @@ script = ExtResource("20_4a77u")
 [node name="SagTopBar" type="Sprite2D" parent="UI/top_bar"]
 position = Vector2(1198, 19)
 scale = Vector2(1.19624, 1.19624)
-texture = ExtResource("21_fkkjo")
+texture = ExtResource("23_2b7d7")
 
 [node name="Sprite2D" type="Sprite2D" parent="UI/top_bar"]
 position = Vector2(408, 36.75)
