@@ -10,7 +10,7 @@ func _ready():
 	aim_position = aim_position.normalized()
 	look_at(get_global_mouse_position())
 	$shoot_particle.emitting = true
-	global_variables.bullet -= 1
+	global_variables.dollar -= 1
 	
 func _physics_process(delta):
 		global_position += aim_position * bullet_speed

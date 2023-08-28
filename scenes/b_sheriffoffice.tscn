@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_335ru"]
 size = Vector2(145, 47)
 
-[node name="b_sheriffoffice" type="Area2D"]
+[node name="b_sheriffoffice" type="Area2D" groups=["ikon_building"]]
 script = ExtResource("1_7baf3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

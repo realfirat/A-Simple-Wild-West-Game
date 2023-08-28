@@ -25,3 +25,9 @@ func _process(delta):
 				ready_to_change_cursor = false
 	
 	ready_to_change_cursor = true
+	
+	if not global_variables.is_build_mode:
+		if get_tree().has_group("ikon_building"):
+			var ikon_objeler = get_tree().get_nodes_in_group("ikon_building")
+			for n in ikon_objeler:
+				n.queue_free()

@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08u0i"]
 size = Vector2(226, 75)
 
-[node name="b_townhall" type="Area2D"]
+[node name="b_townhall" type="Area2D" groups=["ikon_building"]]
 script = ExtResource("1_cinnc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

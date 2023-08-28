@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/native_dead.gd" id="1_mi2gs"]
 [ext_resource type="Texture2D" uid="uid://brqbb88ciragy" path="res://assets/native_dead.png" id="2_tvbpu"]
 [ext_resource type="PackedScene" uid="uid://3e8h601mebno" path="res://scenes/particle_justice.tscn" id="3_xqqte"]
-[ext_resource type="Texture2D" uid="uid://dh1134f27tbq3" path="res://assets/ikon_faith.png" id="4_6563n"]
+[ext_resource type="Texture2D" uid="uid://b68ckymewshu4" path="res://assets/ikon_native.png" id="4_snvv1"]
 
 [node name="native_dead" type="Node2D"]
 script = ExtResource("1_mi2gs")
@@ -17,6 +17,6 @@ one_shot = true
 autostart = true
 
 [node name="particle_faith" parent="." instance=ExtResource("3_xqqte")]
-texture = ExtResource("4_6563n")
+texture = ExtResource("4_snvv1")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

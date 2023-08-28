@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y83qx"]
 size = Vector2(213, 57)
 
-[node name="b_bank" type="Area2D"]
+[node name="b_bank" type="Area2D" groups=["ikon_building"]]
 script = ExtResource("1_ubgom")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

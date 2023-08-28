@@ -58,4 +58,9 @@ color_ramp = SubResource("Gradient_7o8qk")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(-86, 102, -85, -60, -47, -60, -42, -78, -26, -95, 0, -102, 28, -94, 41, -80, 47, -60, 85, -60, 86, 102)
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -9,3 +9,7 @@ func _ready():
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("balta") or area.is_in_group("bullet_rifle_fed") or area.is_in_group("bullet_rifle"):
 		area.queue_free()
+
+
+func _on_timer_timeout():
+	global_variables.justice += 10

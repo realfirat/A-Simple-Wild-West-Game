@@ -1,11 +1,10 @@
-[gd_scene load_steps=43 format=3 uid="uid://d2br6yx14n0mn"]
+[gd_scene load_steps=42 format=3 uid="uid://d2br6yx14n0mn"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hc6o7"]
 [ext_resource type="Texture2D" uid="uid://ccc3j236c8jin" path="res://assets/_0017_Layer-0.png" id="2_uejij"]
 [ext_resource type="Texture2D" uid="uid://bwdp4ni5epkr0" path="res://assets/_0014_arka_daglar.png" id="3_ovaie"]
 [ext_resource type="Texture2D" uid="uid://b176o3mdi2joo" path="res://assets/_0013_railroad.png" id="4_e5xng"]
 [ext_resource type="PackedScene" uid="uid://wblx8v5541rq" path="res://scenes/kovboy.tscn" id="5_u1lv2"]
-[ext_resource type="Script" path="res://scripts/bullet_counter.gd" id="6_wc3cm"]
 [ext_resource type="Script" path="res://scripts/building_grid.gd" id="7_eope7"]
 [ext_resource type="Script" path="res://scripts/building_block.gd" id="8_l2wer"]
 [ext_resource type="Texture2D" uid="uid://d2irel15ci05a" path="res://assets/ikon_bg.png" id="8_r5o7l"]
@@ -118,14 +117,6 @@ polygon = PackedVector2Array(-12, 506, 8, 511, 108, 504, 207, 485, 312, 453, 439
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="bullet_counter" type="Label" parent="UI"]
-offset_left = 5.0
-offset_top = 916.0
-offset_right = 547.0
-offset_bottom = 1066.0
-theme_override_font_sizes/font_size = 20
-script = ExtResource("6_wc3cm")
-
 [node name="building_grid" type="Control" parent="UI"]
 visible = false
 modulate = Color(1, 1, 1, 0.74902)
@@ -169,7 +160,7 @@ rotation = -0.785397
 theme_override_colors/font_color = Color(0.854902, 0.521569, 0.486275, 1)
 theme_override_colors/font_shadow_color = Color(0.470588, 0.152941, 0.0941176, 1)
 theme_override_fonts/font = ExtResource("21_hqvvg")
-text = "50 "
+text = "200"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -204,7 +195,7 @@ rotation = -0.785397
 theme_override_colors/font_color = Color(0.854902, 0.521569, 0.486275, 1)
 theme_override_colors/font_shadow_color = Color(0.470588, 0.152941, 0.0941176, 1)
 theme_override_fonts/font = ExtResource("21_hqvvg")
-text = "50 "
+text = "200"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -240,7 +231,7 @@ rotation = -0.785397
 theme_override_colors/font_color = Color(0.854902, 0.521569, 0.486275, 1)
 theme_override_colors/font_shadow_color = Color(0.470588, 0.152941, 0.0941176, 1)
 theme_override_fonts/font = ExtResource("21_hqvvg")
-text = "50 "
+text = "200"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -276,7 +267,7 @@ rotation = -0.785397
 theme_override_colors/font_color = Color(0.854902, 0.521569, 0.486275, 1)
 theme_override_colors/font_shadow_color = Color(0.470588, 0.152941, 0.0941176, 1)
 theme_override_fonts/font = ExtResource("21_hqvvg")
-text = "50 "
+text = "200"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -312,7 +303,7 @@ rotation = -0.785397
 theme_override_colors/font_color = Color(0.854902, 0.521569, 0.486275, 1)
 theme_override_colors/font_shadow_color = Color(0.470588, 0.152941, 0.0941176, 1)
 theme_override_fonts/font = ExtResource("21_hqvvg")
-text = "50 "
+text = "200"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true

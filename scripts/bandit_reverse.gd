@@ -2,7 +2,7 @@ extends Path2D
 
 var fed_speed = -0.0020
 @onready var fed_bullet = preload("res://scenes/bullet_rifle_fed.tscn")
-var hp = 20
+@onready var hp = global_variables.bandit_max_hp + (global_variables.justice / 50)
 @onready var bandit_dead = preload("res://scenes/bandit_dead.tscn")
 
 func _physics_process(delta):
@@ -17,6 +17,7 @@ func _physics_process(delta):
 	if hp <= 0:
 		global_variables.score += 15
 		global_variables.justice += 10
+		global_variables.dollar += 15
 		var score_text = get_tree().get_first_node_in_group("score_text")
 		var justice_text = get_tree().get_first_node_in_group("justice_text")
 		score_text.score_changed()

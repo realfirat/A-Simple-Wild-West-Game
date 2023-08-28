@@ -16,6 +16,7 @@ func _on_area_2d_mouse_exited():
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and global_variables.is_a_building_selected == 0:
-		global_variables.is_a_building_selected = 1
-		var building = building_saloon.instantiate()
-		$"../../../building_layer".add_child(building)
+		if global_variables.dollar >= 200:
+			global_variables.is_a_building_selected = 1
+			var building = building_saloon.instantiate()
+			$"../../../building_layer".add_child(building)
