@@ -5,6 +5,9 @@ var fed_speed = -0.0015
 @onready var hp = global_variables.fed_max_hp + (global_variables.independence / 50)
 @onready var fed_dead = preload("res://scenes/fed_dead.tscn")
 
+func _ready():
+	$PathFollow2D/federal_body/hp_bar.max_value = hp
+
 func _physics_process(delta):
 	if not global_variables.is_build_mode:
 		$PathFollow2D.progress_ratio += fed_speed

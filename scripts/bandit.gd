@@ -5,6 +5,9 @@ var fed_speed = 0.0020
 @onready var hp = global_variables.bandit_max_hp + (global_variables.justice / 50)
 @onready var bandit_dead = preload("res://scenes/bandit_dead.tscn")
 
+func _ready():
+	$PathFollow2D/bandit_body/hp_bar.max_value = hp
+
 func _physics_process(delta):
 	if not global_variables.is_build_mode:
 		$PathFollow2D.progress_ratio += fed_speed

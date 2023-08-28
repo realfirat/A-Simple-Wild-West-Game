@@ -17,6 +17,7 @@ func _process(delta):
 			var b_church = church.instantiate()
 			b_church.global_position = global_position
 			get_parent().add_child(b_church)
+			global_variables.dollar -= 200
 			queue_free()
 			
 	if has_overlapping_bodies() == true or overlaps_area(get_parent().get_parent().get_node("build_zone")) == true:
