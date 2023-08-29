@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://d2br6yx14n0mn"]
+[gd_scene load_steps=43 format=3 uid="uid://d2br6yx14n0mn"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_hc6o7"]
 [ext_resource type="Texture2D" uid="uid://ccc3j236c8jin" path="res://assets/_0017_Layer-0.png" id="2_uejij"]
@@ -31,6 +31,7 @@
 [ext_resource type="Script" path="res://scripts/fun.gd" id="28_dy0js"]
 [ext_resource type="Script" path="res://scripts/independence.gd" id="29_l7eho"]
 [ext_resource type="Script" path="res://scripts/faith.gd" id="30_ntbvv"]
+[ext_resource type="PackedScene" uid="uid://nkcv5k8y8j6y" path="res://scenes/train.tscn" id="32_wafh2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8afdw"]
 size = Vector2(274, 1203)
@@ -542,6 +543,8 @@ script = ExtResource("25_ulnt8")
 
 [node name="Timer" type="Timer" parent="enemy_spawner"]
 autostart = true
+
+[node name="train" parent="." instance=ExtResource("32_wafh2")]
 
 [connection signal="input_event" from="UI/building_block/bank/Area2D" to="UI/building_block/bank" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="UI/building_block/bank/Area2D" to="UI/building_block/bank" method="_on_area_2d_mouse_entered"]
