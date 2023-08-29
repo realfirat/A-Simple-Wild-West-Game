@@ -1,10 +1,4 @@
 res://scenes/main.tscn
-res://scenes/native_reverse.tscn
-res://scenes/bandit.tscn
-res://scenes/bandit_reverse.tscn
-res://scenes/federal.tscn
-res://scenes/federal_reverse.tscn
-res://scenes/native.tscn
 res://scenes/train.tscn
-res://scripts/train.gd
-res://scripts/main.gd
+res://scripts/bandit_body.gd
+res://scenes/bandit.tscn

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://nkcv5k8y8j6y"]
+[gd_scene load_steps=18 format=3 uid="uid://nkcv5k8y8j6y"]
 
 [ext_resource type="Script" path="res://scripts/train.gd" id="1_jguvc"]
 [ext_resource type="Texture2D" uid="uid://r1m8oboe123h" path="res://assets/tren_body.png" id="2_4f767"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://4853i35du4oy" path="res://assets/duman_particle.png" id="5_c1rtg"]
 [ext_resource type="Texture2D" uid="uid://dkuusvk7chsam" path="res://assets/tourist_wagon.png" id="6_rs4l0"]
 [ext_resource type="Texture2D" uid="uid://1cwe2t1cqbwm" path="res://assets/bandit_wagon.png" id="7_dh4fy"]
+[ext_resource type="Script" path="res://scripts/bandit_body.gd" id="8_ml6tl"]
+[ext_resource type="Texture2D" uid="uid://cy6cewtiigx6k" path="res://assets/_0004_silah.png" id="9_1sclx"]
 
 [sub_resource type="Curve2D" id="Curve2D_8sao8"]
 _data = {
@@ -17,6 +19,21 @@ point_count = 24
 [sub_resource type="Gradient" id="Gradient_1d0kx"]
 offsets = PackedFloat32Array(0, 0.502347, 1)
 colors = PackedColorArray(0, 0, 0, 0.843137, 0.231373, 0.231373, 0.231373, 0.580392, 1, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_tdq2o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/teker_ayrac:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-36.0617, 36.3878)]
+}
 
 [sub_resource type="Animation" id="Animation_7w336"]
 resource_name = "teker_ayrac"
@@ -35,21 +52,6 @@ tracks/0/keys = {
 "values": [Vector2(-36.0617, 36.3878), Vector2(-24.0617, 36.3866), Vector2(-23.0604, 48.3864), Vector2(-34.0604, 48.3876), Vector2(-36.0617, 36.3878)]
 }
 
-[sub_resource type="Animation" id="Animation_tdq2o"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Node2D/teker_ayrac:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-36.0617, 36.3878)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mj0mu"]
 _data = {
 "RESET": SubResource("Animation_tdq2o"),
@@ -58,6 +60,13 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ss4ki"]
 size = Vector2(92.9378, 61.9243)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_to5o1"]
+size = Vector2(36, 36)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h373j"]
+radius = 18.0
+height = 64.0
 
 [node name="train" type="Path2D"]
 curve = SubResource("Curve2D_8sao8")
@@ -140,7 +149,6 @@ texture = ExtResource("3_rsvob")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tourist_wagon/train"]
 position = Vector2(-0.00390625, 0.00799561)
 rotation = -0.212486
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ss4ki")
 
 [node name="bandit_wagon" type="PathFollow2D" parent="."]
@@ -167,5 +175,33 @@ texture = ExtResource("3_rsvob")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bandit_wagon/train"]
 position = Vector2(-0.00390625, 0.00799561)
 rotation = -0.212486
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ss4ki")
+
+[node name="bandit_body" type="CharacterBody2D" parent="bandit_wagon"]
+rotation = 0.379104
+script = ExtResource("8_ml6tl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bandit_wagon/bandit_body"]
+position = Vector2(0, 13)
+shape = SubResource("RectangleShape2D_to5o1")
+
+[node name="rifle" type="Sprite2D" parent="bandit_wagon/bandit_body"]
+position = Vector2(-6.90063, -1.83789)
+texture = ExtResource("9_1sclx")
+offset = Vector2(16, 3)
+
+[node name="bandit_hitarea" type="Area2D" parent="bandit_wagon/bandit_body"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bandit_wagon/bandit_body/bandit_hitarea"]
+shape = SubResource("CapsuleShape2D_h373j")
+
+[node name="Timer" type="Timer" parent="bandit_wagon/bandit_body"]
+wait_time = 2.0
+autostart = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="bandit_wagon/bandit_body"]
+position = Vector2(1.41797, -0.164673)
+
+[connection signal="timeout" from="bandit_wagon/bandit_body/Timer" to="bandit_wagon/bandit_body" method="_on_timer_timeout"]
+[connection signal="screen_entered" from="bandit_wagon/bandit_body/VisibleOnScreenNotifier2D" to="bandit_wagon/bandit_body" method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="bandit_wagon/bandit_body/VisibleOnScreenNotifier2D" to="bandit_wagon/bandit_body" method="_on_visible_on_screen_notifier_2d_screen_exited"]
