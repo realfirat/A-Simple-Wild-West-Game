@@ -7,3 +7,4 @@ res://scenes/federal_reverse.tscn
 res://scenes/native.tscn
 res://scenes/train.tscn
 res://scripts/train.gd
+res://scripts/main.gd
