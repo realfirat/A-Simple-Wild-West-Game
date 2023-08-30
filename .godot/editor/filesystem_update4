@@ -1,4 +1,14 @@
 res://scenes/main.tscn
 res://scenes/train.tscn
-res://scripts/bandit_body.gd
 res://scenes/bandit.tscn
+res://scripts/train.gd
+res://scenes/kovboy.tscn
+res://scripts/kovboy.gd
+res://scenes/federal.tscn
+res://scenes/menu.tscn
+res://THEMES/new_theme.tres
+res://scripts/menu.gd
+res://scripts/info_bg.gd
+res://scripts/game_over.gd
+res://scenes/game_over.tscn
+res://scripts/main.gd

@@ -3,6 +3,7 @@ extends Node2D
 @onready var ready_to_change_cursor = true
 var aim = load("res://assets/_0000_aim.png")
 var hammer = load("res://assets/hammer.png")
+@onready var game_over_screen = preload("res://scenes/game_over.tscn")
 
 func _ready():
 	Input.set_custom_mouse_cursor(aim, 0, Vector2(25, 25))
@@ -23,6 +24,9 @@ func _process(delta):
 			if ready_to_change_cursor:
 				Input.set_custom_mouse_cursor(hammer, 0, Vector2(25, 10))
 				ready_to_change_cursor = false
+				
+	if global_variables.hp <= 0:
+		get_tree().change_scene_to_packed(game_over_screen)
 	
 	ready_to_change_cursor = true
 	

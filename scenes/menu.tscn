@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://g2gwco6pcn6t"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_584t0"]
+[ext_resource type="Texture2D" uid="uid://boa7dgaxdxtp3" path="res://assets/menu_back.png" id="1_krndi"]
+[ext_resource type="Texture2D" uid="uid://bhmdajjqox1u" path="res://assets/front_rev.png" id="2_821dj"]
+[ext_resource type="Theme" uid="uid://dnftb46t82mmf" path="res://THEMES/new_theme.tres" id="3_mimq6"]
+
+[node name="menu" type="Node2D"]
+position = Vector2(178, -17)
+script = ExtResource("1_584t0")
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(-178, 17)
+scale = Vector2(1.02593, 1.02593)
+texture = ExtResource("1_krndi")
+centered = false
+
+[node name="front" type="Sprite2D" parent="."]
+position = Vector2(782, 557)
+texture = ExtResource("2_821dj")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 390.0
+offset_top = 655.0
+offset_right = 1207.0
+offset_bottom = 747.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_mimq6")
+text = "START GAME"
+
+[node name="Button2" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 390.0
+offset_top = 753.0
+offset_right = 1207.0
+offset_bottom = 845.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_mimq6")
+text = "EXIT GAME"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 454.0
+offset_top = 1016.0
+offset_right = 1155.0
+offset_bottom = 1201.0
+theme_override_font_sizes/font_size = 24
+text = "FIRAT SAKAR - 2023"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

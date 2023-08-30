@@ -71,7 +71,22 @@ func _on_timer_small_gun_timeout():
 func _on_player_hitarea_area_entered(area):
 	if area.is_in_group("bullet_rifle_fed"):
 		global_variables.hp -= 5
-		area.queue_free()
-	if area.is_in_group("balta"):
+		$spr_body.modulate = Color.PALE_VIOLET_RED
+		$spr_hat.modulate = Color.PALE_VIOLET_RED
+		$spr_head.modulate = Color.PALE_VIOLET_RED
+		area.queue_free()		
+		await get_tree().create_timer(0.1).timeout
+		$spr_body.modulate = Color.WHITE
+		$spr_hat.modulate = Color.WHITE
+		$spr_head.modulate = Color.WHITE
+		
+	elif area.is_in_group("balta"):
 		global_variables.hp -= 10
-		area.queue_free()
+		$spr_body.modulate = Color.PALE_VIOLET_RED
+		$spr_hat.modulate = Color.PALE_VIOLET_RED
+		$spr_head.modulate = Color.PALE_VIOLET_RED
+		area.queue_free()		
+		await get_tree().create_timer(0.1).timeout
+		$spr_body.modulate = Color.WHITE
+		$spr_hat.modulate = Color.WHITE
+		$spr_head.modulate = Color.WHITE

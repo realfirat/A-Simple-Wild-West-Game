@@ -19,7 +19,7 @@ func _on_dollar_area_mouse_exited():
 
 func _on_justice_area_mouse_entered():
 	title.text = "JUSTICE"
-	text.text = "Bandits are more stronger but give more money"
+	text.text = "Stronger bandits, more money"
 	self.visible = true
 	global_position = Vector2(1139, 75)
 
@@ -41,7 +41,7 @@ func _on_fun_area_mouse_exited():
 
 func _on_independence_area_mouse_entered():
 	title.text = "FREEDOM"
-	text.text = "Stronger federals... More money when you kill them..."
+	text.text = "Federals attack you harder than before"
 	self.visible = true
 	global_position = Vector2(1538, 76)
 
@@ -52,7 +52,7 @@ func _on_independence_area_mouse_exited():
 
 func _on_faith_area_mouse_entered():
 	title.text = "NATIVES"
-	text.text = "If you hunt them, they will attack you more frequently"
+	text.text = "Natives become more powerful"
 	self.visible = true
 	global_position = Vector2(1657, 76)
 
